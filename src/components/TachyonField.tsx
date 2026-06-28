@@ -51,7 +51,7 @@ export function TachyonField({ className = "" }: { className?: string }) {
     function seed() {
       const count = isSmall ? 30 : 88;
       parts = Array.from({ length: count }, (_, i) => {
-        const speed = 0.5 + rnd(i, 3) * 2.4;
+        const speed = 0.9 + rnd(i, 3) * 2.2;
         const angle = (rnd(i, 8) - 0.5) * 0.5;
         const vx = Math.cos(angle) * speed;
         const vy = Math.sin(angle) * speed;
@@ -125,24 +125,27 @@ export function TachyonField({ className = "" }: { className?: string }) {
       for (const p of parts) drawParticle(p);
     }
 
-    const R = 150; // cursor influence radius
+    const R = 240; // cursor influence radius
     function step() {
       for (const p of parts) {
-        // the cursor shoves nearby particles outward
+        // a gentle pull toward the cursor: the stream bends toward it like a
+        // river current, and the force fades right at the cursor so particles
+        // flow past instead of bunching up on top of it.
         if (ptr.active) {
-          const dx = p.x - ptr.x;
-          const dy = p.y - ptr.y;
+          const dx = ptr.x - p.x;
+          const dy = ptr.y - p.y;
           const d2 = dx * dx + dy * dy;
           if (d2 < R * R) {
             const d = Math.sqrt(d2) || 1;
-            const f = (1 - d / R) * 1.6;
+            const near = Math.min(d / 70, 1); // fade out close to the cursor
+            const f = (1 - d / R) * near * 0.38;
             p.vx += (dx / d) * f;
             p.vy += (dy / d) * f;
           }
         }
-        // ease back toward the baseline drift
-        p.vx += (p.bvx - p.vx) * 0.035;
-        p.vy += (p.bvy - p.vy) * 0.035;
+        // ease back toward the baseline drift so they keep flowing, not gathering
+        p.vx += (p.bvx - p.vx) * 0.05;
+        p.vy += (p.bvy - p.vy) * 0.05;
 
         const speed = Math.hypot(p.vx, p.vy);
         const baseSpeed = Math.hypot(p.bvx, p.bvy) || 0.001;

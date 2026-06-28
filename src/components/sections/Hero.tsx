@@ -58,7 +58,7 @@ export function Hero() {
 
             {/* trust line */}
             <p
-              className="mt-12 max-w-xl font-mono text-[12px] text-ink-muted animate-fade-up"
+              className="mt-12 max-w-xl text-[15px] italic text-ink-muted animate-fade-up"
               style={{ animationDelay: "340ms" }}
             >
               {trustLine}

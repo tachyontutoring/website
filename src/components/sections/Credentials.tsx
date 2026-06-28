@@ -24,8 +24,8 @@ export function Credentials() {
       <Reveal>
         <p className="mt-9 max-w-5xl font-display text-2xl font-medium leading-[1.45] text-ink-soft sm:text-[1.9rem] md:text-[2.4rem] md:leading-[1.4]">
           Two of us, <Fig>1560</Fig>s, both in the top <Fig>1%</Fig> of the country. <Fig>100%</Fig>{" "}
-          of the questions our AI writes get checked by hand. And we took the <Fig>2.0</Fig>, the new
-          digital SAT, ourselves.
+          of the questions our AI writes get checked by hand. And we took the new digital SAT
+          ourselves.
         </p>
       </Reveal>
     </section>
