@@ -7,38 +7,37 @@ import type { Config } from "tailwindcss";
  */
 const config: Config = {
   content: ["./src/**/*.{ts,tsx,mdx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        // Warm "paper" + near-black "ink".
+        // Colors reference CSS variables so dark mode works by swapping :root vars under .dark
         paper: {
-          DEFAULT: "#F7F5F0",
-          soft: "#F0EDE4",
-          deep: "#ECE8DD",
+          DEFAULT: "rgb(var(--color-paper) / <alpha-value>)",
+          soft: "rgb(var(--color-paper-soft) / <alpha-value>)",
+          deep: "rgb(var(--color-paper-deep) / <alpha-value>)",
         },
         ink: {
-          DEFAULT: "#0A0A0A",
-          soft: "#33322E",
-          muted: "#6B6860",
-          faint: "#9C9890",
+          DEFAULT: "rgb(var(--color-ink) / <alpha-value>)",
+          soft: "rgb(var(--color-ink-soft) / <alpha-value>)",
+          muted: "rgb(var(--color-ink-muted) / <alpha-value>)",
+          faint: "rgb(var(--color-ink-faint) / <alpha-value>)",
         },
-        // Hairline rules + grid lines.
         line: {
-          DEFAULT: "#DAD4C6",
-          strong: "#C7C0AE",
+          DEFAULT: "rgb(var(--color-line) / <alpha-value>)",
+          strong: "rgb(var(--color-line-strong) / <alpha-value>)",
         },
-        // The single accent: ultramarine (used as a solid, never a gradient).
         accent: {
-          50: "#ECEEFE",
-          100: "#DADEFD",
-          200: "#B7BFFB",
-          300: "#8E9BF7",
-          400: "#6172F0",
-          500: "#3A4DE8",
-          600: "#1E36E0", // primary
-          700: "#1A2BB4",
-          800: "#17248C",
-          900: "#141E66",
+          50: "rgb(var(--color-accent-50) / <alpha-value>)",
+          100: "rgb(var(--color-accent-100) / <alpha-value>)",
+          200: "rgb(var(--color-accent-200) / <alpha-value>)",
+          300: "rgb(var(--color-accent-300) / <alpha-value>)",
+          400: "rgb(var(--color-accent-400) / <alpha-value>)",
+          500: "rgb(var(--color-accent-500) / <alpha-value>)",
+          600: "rgb(var(--color-accent-600) / <alpha-value>)",
+          700: "rgb(var(--color-accent-700) / <alpha-value>)",
+          800: "rgb(var(--color-accent-800) / <alpha-value>)",
+          900: "rgb(var(--color-accent-900) / <alpha-value>)",
         },
       },
       fontFamily: {

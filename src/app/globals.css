@@ -2,16 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---- Tokens mirrored as CSS vars (retheme here + in tailwind.config.ts) ---- */
+/* ---- Design tokens as CSS vars (RGB channels for Tailwind opacity support) ---- */
 :root {
-  --paper: #f7f5f0;
-  --ink: #0a0a0a;
-  --accent: #1e36e0;
-  --line: #dad4c6;
+  /* Paper (warm light backgrounds) */
+  --color-paper: 247 245 240;
+  --color-paper-soft: 240 237 228;
+  --color-paper-deep: 236 232 221;
+  /* Ink (near-black text) */
+  --color-ink: 10 10 10;
+  --color-ink-soft: 51 50 46;
+  --color-ink-muted: 107 104 96;
+  --color-ink-faint: 156 152 144;
+  /* Hairlines */
+  --color-line: 218 212 198;
+  --color-line-strong: 199 192 174;
+  /* Accent (ultramarine) */
+  --color-accent-50: 236 238 254;
+  --color-accent-100: 218 222 253;
+  --color-accent-200: 183 191 251;
+  --color-accent-300: 142 155 247;
+  --color-accent-400: 97 114 240;
+  --color-accent-500: 58 77 232;
+  --color-accent-600: 30 54 224;
+  --color-accent-700: 26 43 180;
+  --color-accent-800: 23 36 140;
+  --color-accent-900: 20 30 102;
+  /* Grid overlay (full rgba — not used in Tailwind classes) */
   --grid: rgba(10, 10, 10, 0.045);
+  /* Layout */
   --gutter: clamp(1.25rem, 4vw, 4rem);
   --font-display: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   --font-sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/* Dark mode token overrides */
+.dark {
+  --color-paper: 15 15 13;
+  --color-paper-soft: 22 21 18;
+  --color-paper-deep: 30 29 25;
+  --color-ink: 242 240 235;
+  --color-ink-soft: 200 196 188;
+  --color-ink-muted: 140 136 128;
+  --color-ink-faint: 80 78 74;
+  --color-line: 42 41 36;
+  --color-line-strong: 58 57 50;
+  --grid: rgba(242, 240, 235, 0.06);
 }
 
 html {
@@ -21,15 +56,15 @@ html {
 }
 
 body {
-  background-color: var(--paper);
-  color: var(--ink);
+  background-color: rgb(var(--color-paper));
+  color: rgb(var(--color-ink));
   font-feature-settings: "ss01", "cv01";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: var(--accent);
+  background: rgb(var(--color-accent-600));
   color: #fff;
 }
 
