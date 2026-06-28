@@ -16,7 +16,7 @@ export function Hero() {
 
       <div className="wrap relative">
         <div className="grid grid-cols-12 gap-y-10 pb-20 pt-28 sm:pt-36 md:min-h-[88vh] md:items-center md:pb-28">
-          <div className="col-span-12 md:col-span-8 lg:col-span-7">
+          <div className="col-span-12">
             {/* kicker */}
             <div className="mb-6">
               <span className="font-mono text-[11px] uppercase tracking-label text-ink-muted">
@@ -24,14 +24,9 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="font-display text-display-xl font-bold tracking-[-0.025em] text-ink">
-              <span className="block animate-fade-up">Neighborhood Expertise,</span>
-              <span
-                className="block text-accent-600 animate-fade-up"
-                style={{ animationDelay: "100ms" }}
-              >
-                Amplified by AI.
-              </span>
+            <h1 className="font-display text-display-lg font-bold tracking-[-0.025em] text-ink animate-fade-up">
+              <span className="block">Neighborhood Expertise,</span>
+              <span className="block text-accent-600">Amplified by AI.</span>
             </h1>
 
             <p
