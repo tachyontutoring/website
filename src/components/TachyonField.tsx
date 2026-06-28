@@ -51,7 +51,7 @@ export function TachyonField({ className = "" }: { className?: string }) {
     function seed() {
       const count = isSmall ? 30 : 88;
       parts = Array.from({ length: count }, (_, i) => {
-        const speed = 0.9 + rnd(i, 3) * 2.2;
+        const speed = 0.6 + rnd(i, 3) * 1.4;
         const angle = (rnd(i, 8) - 0.5) * 0.5;
         const vx = Math.cos(angle) * speed;
         const vy = Math.sin(angle) * speed;
@@ -137,15 +137,15 @@ export function TachyonField({ className = "" }: { className?: string }) {
           const d2 = dx * dx + dy * dy;
           if (d2 < R * R) {
             const d = Math.sqrt(d2) || 1;
-            const near = Math.min(d / 70, 1); // fade out close to the cursor
-            const f = (1 - d / R) * near * 0.38;
+            const near = Math.min(d / 100, 1); // fade out close to cursor to prevent buildup
+            const f = (1 - d / R) * near * 0.14;
             p.vx += (dx / d) * f;
             p.vy += (dy / d) * f;
           }
         }
         // ease back toward the baseline drift so they keep flowing, not gathering
-        p.vx += (p.bvx - p.vx) * 0.05;
-        p.vy += (p.bvy - p.vy) * 0.05;
+        p.vx += (p.bvx - p.vx) * 0.1;
+        p.vy += (p.bvy - p.vy) * 0.1;
 
         const speed = Math.hypot(p.vx, p.vy);
         const baseSpeed = Math.hypot(p.bvx, p.bvy) || 0.001;

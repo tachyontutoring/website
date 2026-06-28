@@ -65,6 +65,13 @@ export function Hero() {
             </p>
           </div>
         </div>
+
+        {/* tachyon footnote — bottom-right, desktop only */}
+        <p className="absolute bottom-7 right-0 hidden max-w-[220px] text-right font-mono text-[10px] leading-relaxed text-ink-muted opacity-60 md:block">
+          Tachyons are theoretical particles that can never travel below the speed of light.
+          The universe&apos;s speed limit is their floor, not their ceiling.
+          That&apos;s what we aim to do for your score.
+        </p>
       </div>
     </section>
   );
