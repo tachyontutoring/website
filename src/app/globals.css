@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Tokens mirrored as CSS vars (retheme here + in tailwind.config.ts) ---- */
+:root {
+  --paper: #f7f5f0;
+  --ink: #0a0a0a;
+  --accent: #1e36e0;
+  --line: #dad4c6;
+  --grid: rgba(10, 10, 10, 0.045);
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --font-display: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-feature-settings: "ss01", "cv01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@layer components {
+  /* Page gutter / max width */
+  .wrap {
+    @apply mx-auto w-full max-w-page;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  /* The motif: fine graph-paper grid. Subtle, layered behind content. */
+  .grid-paper {
+    background-image:
+      linear-gradient(to right, var(--grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .grid-paper-fine {
+    background-image:
+      linear-gradient(to right, var(--grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+    background-size: 14px 14px;
+  }
+
+  /* Hairline rules between sections */
+  .hairline {
+    @apply border-line;
+  }
+
+  /* Monospace technical label (e.g. "FIG. 01", "99TH PCTL") */
+  .mono-label {
+    @apply font-mono text-[11px] uppercase tracking-label text-ink-muted;
+  }
+  .mono-label-accent {
+    @apply font-mono text-[11px] uppercase tracking-label text-accent-600;
+  }
+
+  /* Oversized margin numeral for section indices */
+  .index-num {
+    @apply font-mono text-sm font-medium text-accent-600;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-600 focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+  }
+  .btn-primary {
+    @apply btn bg-ink px-6 py-3.5 text-paper hover:bg-accent-600;
+  }
+  .btn-ghost {
+    @apply btn px-1 py-1 text-ink underline decoration-line decoration-2 underline-offset-[6px] hover:decoration-accent-600;
+  }
+
+  /* Reveal-on-scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
