@@ -25,7 +25,7 @@ export function Hero() {
             </div>
 
             <h1 className="font-display text-display-xl font-bold tracking-[-0.025em] text-ink">
-              <span className="block animate-fade-up">Human Expertise,</span>
+              <span className="block animate-fade-up">Neighborhood Expertise,</span>
               <span
                 className="block text-accent-600 animate-fade-up"
                 style={{ animationDelay: "100ms" }}
@@ -38,9 +38,10 @@ export function Hero() {
               className="mt-7 max-w-xl text-lg leading-relaxed text-ink-soft animate-fade-up sm:text-xl"
               style={{ animationDelay: "180ms" }}
             >
-              We&apos;re two Cambridge students who just took the new digital SAT. You get real
-              one-on-one coaching, plus software that drills exactly what you keep getting wrong. And
-              we check every practice question by hand.
+              We&apos;re two Cambridge students who recently took the new digital SAT. You get real
+              one-on-one coaching, and homework that drills exactly what you keep getting
+              wrong&mdash;it&apos;s personalized to you as a learner. All of our practice questions
+              are human verified by one of us, and they are at the level of the current digital SAT.
             </p>
 
             <div
@@ -48,11 +49,8 @@ export function Hero() {
               style={{ animationDelay: "260ms" }}
             >
               <a href="#booking" className="btn-primary group">
-                Book a free diagnostic
+                Grab a free diagnostic
                 <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" />
-              </a>
-              <a href="#system" className="btn-ghost">
-                See how it works
               </a>
             </div>
 
@@ -68,9 +66,10 @@ export function Hero() {
 
         {/* tachyon footnote — bottom-right, desktop only */}
         <p className="absolute bottom-7 right-0 hidden max-w-[220px] text-right font-mono text-[10px] leading-relaxed text-ink-muted opacity-60 md:block">
-          Tachyons are theoretical particles that can never travel below the speed of light.
-          The universe&apos;s speed limit is their floor, not their ceiling.
-          That&apos;s what we aim to do for your score.
+          Tachyons are theoretical particles that can never travel below the speed of
+          light&mdash;always traveling at speeds beyond human comprehension. Their floor is the rest
+          of the universe&apos;s ceiling. By tailoring your study plan, we aim to make the
+          trajectory of your learning similar to a Tachyon: faster than anything that surrounds it.
         </p>
       </div>
     </section>

@@ -25,7 +25,7 @@ export const nav = [
   { label: "FAQ", href: "/faq" },
 ] as const;
 
-export const trustLine = "Both 1560 · top 1% nationally · took the digital SAT ourselves · now studying at Harvard";
+export const trustLine = "Both 99th percentile score nationally · took the digital SAT ourselves · now taking classes at Harvard";
 
 // THE SYSTEM (process sequence)
 export type SystemStep = { title: string; body: string; tag: string };

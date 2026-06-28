@@ -7,17 +7,17 @@ const pages = [
   {
     href: "/how-it-works",
     title: "How it works",
-    blurb: "The coaching-plus-software loop, and exactly how we use AI without cutting corners.",
+    blurb: "The coaching-plus-software loop, and exactly how we use AI (without cutting any corners, of course).",
   },
   {
     href: "/tutors",
     title: "Meet the tutors",
-    blurb: "Who we are, what we scored, and which part of the test each of us owns.",
+    blurb: "Who we are, what we scored, how we can help you.",
   },
   {
     href: "/pricing",
     title: "Services & pricing",
-    blurb: "Every way to work with us, with the rates printed in plain numbers.",
+    blurb: "Every way to work with us.",
   },
   {
     href: "/faq",
@@ -31,7 +31,7 @@ export function Directory() {
     <section className="wrap py-20 md:py-28">
       <SectionHeader
         label="Look around"
-        title="The short version is above. The details are a click away."
+        title="The details are below."
       />
 
       <div className="mt-12 border-t border-ink">
