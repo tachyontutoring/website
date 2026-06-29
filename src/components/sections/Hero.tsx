@@ -63,10 +63,10 @@ export function Hero() {
               className="mt-7 max-w-xl text-lg leading-relaxed text-ink-soft animate-fade-up sm:text-xl"
               style={{ animationDelay: "180ms" }}
             >
-              We&apos;re two Cambridge students and your neighborhood SAT tutors&mdash;not a national
-              chain. We recently took the new digital test ourselves, so you get real one-on-one
-              coaching plus homework that drills exactly what you keep getting wrong, every question
-              checked by hand.
+              We&apos;re two Cambridge students who recently took the new digital SAT. You get real
+              one-on-one coaching, and homework that drills exactly what you keep getting
+              wrong&mdash;it&apos;s personalized to you as a learner. All of our practice questions
+              are human verified by one of us, and they are at the level of the current digital SAT.
             </p>
 
             <div

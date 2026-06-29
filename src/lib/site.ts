@@ -25,7 +25,7 @@ export const nav = [
   { label: "FAQ", href: "/faq" },
 ] as const;
 
-export const trustLine = "Both 99th percentile score nationally · took the digital SAT ourselves · now taking classes at Harvard";
+export const trustLine = "Your neighborhood tutors · both 99th percentile nationally · took the digital SAT ourselves · now taking classes at Harvard";
 
 // Brand etymology — lives in the footer colophon.
 export const tachyonNote =
