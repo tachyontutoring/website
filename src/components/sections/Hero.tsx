@@ -49,23 +49,24 @@ export function Hero() {
               </a>
             </div>
 
-            {/* trust line */}
-            <p
-              className="mt-12 max-w-xl text-[15px] italic text-ink-muted animate-fade-up"
-              style={{ animationDelay: "340ms" }}
-            >
-              {trustLine}
-            </p>
+            {/* trust line keeps its original position; footnote anchors its bottom to the
+                trust line's bottom on desktop (growing upward), and flows below on smaller screens */}
+            <div className="relative mt-12">
+              <p
+                className="max-w-xl text-[15px] italic text-ink-muted animate-fade-up"
+                style={{ animationDelay: "340ms" }}
+              >
+                {trustLine}
+              </p>
+              <p className="mt-8 max-w-[360px] font-mono text-[10px] leading-relaxed text-ink-muted opacity-60 lg:absolute lg:bottom-0 lg:right-0 lg:mt-0 lg:-mr-4 lg:text-right">
+                Tachyons are theoretical particles that can never travel below the speed of
+                light&mdash;always traveling at speeds beyond human comprehension. Their floor is the
+                rest of the universe&apos;s ceiling. By tailoring your study plan, we aim to make the
+                trajectory of your learning similar to a Tachyon: faster than anything that surrounds it.
+              </p>
+            </div>
           </div>
         </div>
-
-        {/* tachyon footnote — bottom-right, desktop only */}
-        <p className="absolute bottom-7 right-0 hidden max-w-[220px] text-right font-mono text-[10px] leading-relaxed text-ink-muted opacity-60 md:block">
-          Tachyons are theoretical particles that can never travel below the speed of
-          light&mdash;always traveling at speeds beyond human comprehension. Their floor is the rest
-          of the universe&apos;s ceiling. By tailoring your study plan, we aim to make the
-          trajectory of your learning similar to a Tachyon: faster than anything that surrounds it.
-        </p>
       </div>
     </section>
   );

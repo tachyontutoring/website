@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 export function Booking() {
   return (
-    <section id="booking" className="wrap scroll-mt-20 py-20 md:py-28">
+    <section id="booking" className="wrap scroll-mt-4 pt-12 pb-20 md:pt-16 md:pb-28">
       <SectionHeader
         label="Get started"
         title="Grab a free diagnostic."
