@@ -49,7 +49,7 @@ export function TachyonField({ className = "" }: { className?: string }) {
       ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
 
     function seed() {
-      const count = isSmall ? 30 : 88;
+      const count = isSmall ? 34 : 108;
       parts = Array.from({ length: count }, (_, i) => {
         const speed = 0.6 + rnd(i, 3) * 1.4;
         const angle = (rnd(i, 8) - 0.5) * 0.5;
@@ -93,7 +93,7 @@ export function TachyonField({ className = "" }: { className?: string }) {
 
       const a = p.bright;
       const g = ctx!.createLinearGradient(p.x, p.y, tailX, tailY);
-      g.addColorStop(0, `rgba(${CORE},${0.6 * a})`);
+      g.addColorStop(0, `rgba(${CORE},${0.82 * a})`);
       g.addColorStop(1, `rgba(${CORE},0)`);
       ctx!.strokeStyle = g;
       ctx!.lineWidth = p.size;
@@ -106,7 +106,7 @@ export function TachyonField({ className = "" }: { className?: string }) {
       if (p.halo || p.energy > 0.3) {
         const r = p.size * 6 + p.energy * 14;
         const rg = ctx!.createRadialGradient(p.x, p.y, 0, p.x, p.y, r);
-        rg.addColorStop(0, `rgba(${GLOW},${0.2 * a})`);
+        rg.addColorStop(0, `rgba(${GLOW},${0.28 * a})`);
         rg.addColorStop(1, `rgba(${GLOW},0)`);
         ctx!.fillStyle = rg;
         ctx!.beginPath();

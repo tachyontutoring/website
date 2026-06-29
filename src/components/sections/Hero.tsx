@@ -2,31 +2,61 @@ import { ArrowRight } from "lucide-react";
 import { TachyonField } from "@/components/TachyonField";
 import { trustLine } from "@/lib/site";
 
+/**
+ * The SAT runs 400–1600; both tutors sit near the ceiling. A small measured
+ * scale encodes that fact and anchors the bottom of the hero — a structural
+ * device that means something, in place of the old decorative footnote.
+ */
+function ScoreScale() {
+  const pct = ((1560 - 400) / (1600 - 400)) * 100; // ≈ 96.7%
+  return (
+    <div aria-hidden="true" className="mt-16 hidden w-full max-w-3xl md:block">
+      <div className="relative h-px w-full bg-line-strong">
+        <div
+          className="absolute left-0 top-0 h-px bg-accent-600/70"
+          style={{ width: `${pct}%` }}
+        />
+        <div
+          className="absolute -top-1 h-2.5 w-[2px] -translate-x-1/2 bg-signal-600"
+          style={{ left: `${pct}%` }}
+        />
+        <span className="absolute -top-6 left-0 font-mono text-[10px] text-ink-faint">400</span>
+        <span className="absolute -top-6 right-0 font-mono text-[10px] text-ink-faint">1600</span>
+        <span className="absolute top-3 right-0 font-mono text-[10px] uppercase tracking-wider text-ink-muted">
+          both of us — 1560
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden border-b border-line">
       {/* graph-paper motif + interactive field */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 grid-paper" />
       <TachyonField className="pointer-events-none absolute inset-0 h-full w-full" />
-      {/* hairline that fades the field into the text column on desktop */}
+      {/* legibility wash behind the text column — narrower and lighter than before
+          so the particle field reads across the whole hero, not just the right edge */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-0 hidden w-[55%] bg-gradient-to-r from-paper via-paper/90 to-transparent md:block"
+        className="pointer-events-none absolute inset-y-0 left-0 hidden w-[45%] bg-gradient-to-r from-paper via-paper/80 to-transparent md:block"
       />
 
       <div className="wrap relative">
-        <div className="grid grid-cols-12 gap-y-10 pb-20 pt-28 sm:pt-36 md:min-h-[88vh] md:items-center md:pb-28">
-          <div className="col-span-12">
+        <div className="flex min-h-[78vh] flex-col justify-center pb-20 pt-28 sm:pt-36 md:pb-24">
+          <div className="max-w-3xl">
             {/* kicker */}
-            <div className="mb-6">
-              <span className="font-mono text-[11px] uppercase tracking-label text-ink-muted">
-                Cambridge, MA
-              </span>
-            </div>
+            <span className="mono-label">Digital SAT Tutoring — Cambridge, MA</span>
 
-            <h1 className="font-display text-display-lg font-bold tracking-[-0.025em] text-ink animate-fade-up">
-              <span className="block">Neighborhood Expertise,</span>
-              <span className="block text-accent-600">Amplified by AI.</span>
+            <h1 className="mt-6 font-display text-display-xl font-bold text-ink">
+              <span className="block animate-fade-up">The shortest path</span>
+              <span
+                className="block text-accent-600 animate-fade-up"
+                style={{ animationDelay: "100ms" }}
+              >
+                to your best score.
+              </span>
             </h1>
 
             <p
@@ -34,9 +64,9 @@ export function Hero() {
               style={{ animationDelay: "180ms" }}
             >
               We&apos;re two Cambridge students who recently took the new digital SAT. You get real
-              one-on-one coaching, and homework that drills exactly what you keep getting
-              wrong&mdash;it&apos;s personalized to you as a learner. All of our practice questions
-              are human verified by one of us, and they are at the level of the current digital SAT.
+              one-on-one coaching, plus homework that drills exactly what you keep getting
+              wrong&mdash;built around you as a learner. Every practice question is checked by hand
+              and pitched at the level of the current digital test.
             </p>
 
             <div
@@ -49,23 +79,15 @@ export function Hero() {
               </a>
             </div>
 
-            {/* trust line keeps its original position; footnote anchors its bottom to the
-                trust line's bottom on desktop (growing upward), and flows below on smaller screens */}
-            <div className="relative mt-12">
-              <p
-                className="max-w-xl text-[15px] italic text-ink-muted animate-fade-up"
-                style={{ animationDelay: "340ms" }}
-              >
-                {trustLine}
-              </p>
-              <p className="mt-8 max-w-[360px] font-mono text-[10px] leading-relaxed text-ink-muted opacity-60 lg:absolute lg:bottom-0 lg:right-0 lg:mt-0 lg:-mr-4 lg:text-right">
-                Tachyons are theoretical particles that can never travel below the speed of
-                light&mdash;always traveling at speeds beyond human comprehension. Their floor is the
-                rest of the universe&apos;s ceiling. By tailoring your study plan, we aim to make the
-                trajectory of your learning similar to a Tachyon: faster than anything that surrounds it.
-              </p>
-            </div>
+            <p
+              className="mt-10 max-w-xl text-[15px] italic text-ink-muted animate-fade-up"
+              style={{ animationDelay: "340ms" }}
+            >
+              {trustLine}
+            </p>
           </div>
+
+          <ScoreScale />
         </div>
       </div>
     </section>

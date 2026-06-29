@@ -37,7 +37,7 @@ export function Wordmark({
   const content = (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       {showGlyph && <TachyonGlyph className="text-ink" />}
-      <span className="font-mono text-base font-bold uppercase tracking-[0.18em] text-ink">
+      <span className="font-display text-xl font-bold uppercase tracking-[0.04em] text-ink">
         Tachyon
       </span>
     </span>

@@ -39,6 +39,14 @@ const config: Config = {
           800: "rgb(var(--color-accent-800) / <alpha-value>)",
           900: "rgb(var(--color-accent-900) / <alpha-value>)",
         },
+        signal: {
+          50: "rgb(var(--color-signal-50) / <alpha-value>)",
+          100: "rgb(var(--color-signal-100) / <alpha-value>)",
+          300: "rgb(var(--color-signal-300) / <alpha-value>)",
+          500: "rgb(var(--color-signal-500) / <alpha-value>)",
+          600: "rgb(var(--color-signal-600) / <alpha-value>)",
+          700: "rgb(var(--color-signal-700) / <alpha-value>)",
+        },
       },
       fontFamily: {
         display: ["var(--font-display)", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],

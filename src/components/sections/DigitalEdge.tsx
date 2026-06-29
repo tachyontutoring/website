@@ -6,10 +6,10 @@ export function DigitalEdge() {
   return (
     <section id="edge" className="bg-ink text-paper scroll-mt-20">
       <div className="wrap grid-paper py-20 md:py-28">
-        <div className="border-t border-paper/15 pt-8">
+        <div className="border-t-2 border-paper/25 pt-8">
           <div className="grid grid-cols-12 gap-x-6 gap-y-4">
             <div className="col-span-12 md:col-span-3">
-              <span className="font-mono text-[11px] uppercase tracking-label text-paper/50">
+              <span className="font-sans text-[12px] font-semibold uppercase tracking-[0.14em] text-paper/60">
                 The digital SAT
               </span>
             </div>
@@ -31,7 +31,7 @@ export function DigitalEdge() {
           {edgePoints.map((p, i) => (
             <Reveal key={p.label} delay={i * 90}>
               <div className="border-t border-paper/20 pt-5">
-                <span className="font-mono text-[11px] uppercase tracking-label text-accent-400">
+                <span className="font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-accent-300">
                   {p.label}
                 </span>
                 <p className="mt-3 leading-relaxed text-paper/80">{p.text}</p>

@@ -1,11 +1,24 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Mono } from "next/font/google";
+import { Archivo, Bricolage_Grotesque, Space_Mono } from "next/font/google";
 import { site } from "@/lib/site";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
-// Display + body are Helvetica Neue (system stack, defined in globals.css).
-// Labels / technical annotations stay monospaced.
+// Display: Bricolage Grotesque — a characterful editorial grotesque for
+// headlines and large numerals. Body: Archivo — a clean, slightly technical
+// companion. Mono: Space Mono, reserved for real data (scores, prices, legal).
+const display = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
+});
+const sans = Archivo({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
+});
 const mono = Space_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -44,12 +57,16 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F7F5F0",
+  themeColor: "#F5F6F8",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={mono.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${display.variable} ${sans.variable} ${mono.variable}`}
+      suppressHydrationWarning
+    >
       <body className="font-sans antialiased">
         <ThemeProvider>
           <a
