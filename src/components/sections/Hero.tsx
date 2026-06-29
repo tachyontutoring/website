@@ -47,7 +47,7 @@ export function Hero() {
         <div className="flex min-h-[78vh] flex-col justify-center pb-20 pt-28 sm:pt-36 md:pb-24">
           <div className="max-w-3xl">
             {/* kicker */}
-            <span className="mono-label">Digital SAT Tutoring — Cambridge, MA</span>
+            <span className="mono-label">Cambridge, MA</span>
 
             <h1 className="mt-6 font-display text-display-xl font-bold text-ink">
               <span className="block animate-fade-up">The shortest path</span>
@@ -63,10 +63,10 @@ export function Hero() {
               className="mt-7 max-w-xl text-lg leading-relaxed text-ink-soft animate-fade-up sm:text-xl"
               style={{ animationDelay: "180ms" }}
             >
-              We&apos;re two Cambridge students who recently took the new digital SAT. You get real
-              one-on-one coaching, plus homework that drills exactly what you keep getting
-              wrong&mdash;built around you as a learner. Every practice question is checked by hand
-              and pitched at the level of the current digital test.
+              We&apos;re two Cambridge students and your neighborhood SAT tutors&mdash;not a national
+              chain. We recently took the new digital test ourselves, so you get real one-on-one
+              coaching plus homework that drills exactly what you keep getting wrong, every question
+              checked by hand.
             </p>
 
             <div

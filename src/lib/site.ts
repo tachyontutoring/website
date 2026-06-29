@@ -27,6 +27,10 @@ export const nav = [
 
 export const trustLine = "Both 99th percentile score nationally · took the digital SAT ourselves · now taking classes at Harvard";
 
+// Brand etymology — lives in the footer colophon.
+export const tachyonNote =
+  "Tachyons are theoretical particles that can never travel below the speed of light — always faster than everything around them. Their floor is the rest of the universe's ceiling. We tailor your study plan to make your learning move the same way: faster than anything that surrounds it.";
+
 // THE SYSTEM (process sequence)
 export type SystemStep = { title: string; body: string; tag: string };
 export const systemSteps: SystemStep[] = [

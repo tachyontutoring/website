@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -19,11 +18,7 @@ export default function FaqPage() {
       <main id="main" className="pt-24">
         <section className="wrap py-12 md:py-16">
           <div className="max-w-3xl">
-            <Link href="/#top" className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-accent-700 hover:text-accent-800">
-              <ArrowLeft size={14} aria-hidden="true" />
-              Back to home
-            </Link>
-            <span className="mono-label mt-8 block">FAQ</span>
+            <span className="mono-label block">FAQ</span>
             <h1 className="mt-4 font-display text-display-lg font-medium text-ink">Stuff people usually ask.</h1>
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">
               Everything worth knowing before booking your free diagnostic. Still stuck? Email us —

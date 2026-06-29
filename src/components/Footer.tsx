@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail, Instagram } from "lucide-react";
 import { Wordmark } from "./Wordmark";
-import { nav, site } from "@/lib/site";
+import { nav, site, tachyonNote } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -46,8 +46,17 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-line pt-6">
-          <p className="max-w-3xl font-mono text-[11px] leading-relaxed text-ink-muted">
+        <div className="mt-12 border-t border-line pt-8">
+          <div className="grid grid-cols-12 gap-x-6 gap-y-3">
+            <div className="col-span-12 md:col-span-3">
+              <span className="mono-label">Why &ldquo;Tachyon&rdquo;</span>
+            </div>
+            <p className="col-span-12 max-w-2xl text-sm leading-relaxed text-ink-muted md:col-span-9">
+              {tachyonNote}
+            </p>
+          </div>
+
+          <p className="mt-10 max-w-3xl font-mono text-[11px] leading-relaxed text-ink-faint">
             © {site.copyrightYear} {site.name}. {site.name} is an independent tutoring service. Not
             affiliated with or endorsed by the College Board. SAT is a registered trademark of the
             College Board.
