@@ -193,7 +193,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "How does the AI part actually work? Is it just ChatGPT?",
-    a: "Not really. We built our own setup that keeps track of the questions you miss and writes new practice aimed at those exact types. The difference is that we read every question it produces before you ever see it. So it's not you alone with a chatbot. It's a tool we use to spend our time on the stuff that actually needs a person.",
+    a: "No. We built our own setup that keeps track of the questions you miss and writes new practice aimed at those exact types. The difference is that we read every question it produces before you ever see it. So it's not you alone with a chatbot. It's a tool we use to spend our time on the stuff that actually needs a person.",
   },
   {
     q: "Is my student's data private?",
