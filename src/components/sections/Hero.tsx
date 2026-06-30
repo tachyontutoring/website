@@ -46,9 +46,10 @@ export function Hero() {
               className="mt-7 max-w-xl text-lg leading-relaxed text-ink-soft animate-fade-up sm:text-xl"
               style={{ animationDelay: "180ms" }}
             >
-              We&rsquo;re two Cambridge students who both scored 1560 and sat the new digital SAT ourselves.
-              You get real one&#8209;on&#8209;one coaching &mdash; plus <span className="italic text-ink">Tachyon</span>,
-              the software we built to drill exactly what keeps tripping you up. Every question is checked by hand.
+              We&rsquo;re two Cambridge students who both scored 1560 on the new digital SAT ourselves.
+              You get real one&#8209;on&#8209;one coaching with us, and for practice you get{" "}
+              <span className="italic text-ink">Tachyon</span>: the software we built to drill exactly what
+              keeps tripping you up. Every question is checked by hand.
             </p>
 
             <div

@@ -15,11 +15,12 @@ export function Engine() {
 
       <Reveal>
         <h2 className="mt-8 max-w-3xl font-display text-display-md font-semibold leading-[1.05] text-ink">
-          One human half, one machine half.
+          Half human, half machine.
         </h2>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
-          School of Athens is the two of us &mdash; real coaching. <span className="italic">Tachyon</span> is
-          the software we built to handle the grind. You get both, working together.
+          School of Athens is the two of us, providing you with real coaching.{" "}
+          <span className="italic">Tachyon</span> is the software we built to handle the practice. You get
+          both, working together.
         </p>
       </Reveal>
 
@@ -28,8 +29,8 @@ export function Engine() {
           <span className="data-label text-accent-600">The people</span>
           <h3 className="mt-3 font-display text-3xl font-semibold text-ink">School of Athens</h3>
           <p className="mt-3 leading-relaxed text-ink-soft">
-            Real one-on-one sessions. We explain the why, spot the patterns you keep missing, and keep
-            you moving &mdash; online or around Cambridge.
+            Real one-on-one sessions. We spot the patterns you keep missing and keep you moving. Online or
+            around the Greater Boston Area.
           </p>
         </div>
         <div className="bg-paper p-8 md:p-10">
@@ -39,7 +40,8 @@ export function Engine() {
           <h3 className="mt-3 font-display text-3xl font-semibold text-ink">Tachyon</h3>
           <p className="mt-3 leading-relaxed text-ink-soft">
             The software we built. It turns the questions you miss into fresh practice aimed at those
-            exact weak spots &mdash; as much as you want, on demand. We read every one before it reaches you.
+            exact weak spots. We assign you practice, but you get as much as you want, on demand. We read
+            every one before it reaches you.
           </p>
         </div>
       </div>

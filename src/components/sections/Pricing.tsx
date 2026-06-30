@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
-import { offerings, pricingNotes } from "@/lib/site";
+import { offerings } from "@/lib/site";
 
 export function Pricing() {
   return (
@@ -9,7 +9,7 @@ export function Pricing() {
       <SectionHeader
         label="Services & pricing"
         title="Here's what it costs."
-        intro="Whichever you pick, you start with a free diagnostic. These are our launch rates while we get our first students going, so they're lower than they'll be later."
+        intro="Whichever you pick, you start with a free diagnostic (including one of our custom practice tests and a 30 minute session)."
       />
 
       <div className="mt-14 border-t border-ink">
@@ -56,15 +56,6 @@ export function Pricing() {
           </Reveal>
         ))}
       </div>
-
-      <Reveal className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-2 border-t border-line pt-5">
-        <span className="mono-label-accent">Also</span>
-        {pricingNotes.map((note) => (
-          <span key={note} className="font-mono text-[12px] text-ink-soft">
-            {note}
-          </span>
-        ))}
-      </Reveal>
     </section>
   );
 }

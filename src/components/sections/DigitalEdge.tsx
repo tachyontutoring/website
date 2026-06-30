@@ -20,7 +20,8 @@ export function DigitalEdge() {
                 </h2>
                 <p className="mt-4 max-w-2xl text-lg leading-relaxed text-paper/70">
                   The SAT is digital and adaptive now, and it rewards different things than the old
-                  paper version. We just sat for it, so we know where the points actually are.
+                  paper version. We recently took it (and scored highly), so we know where the points
+                  actually are.
                 </p>
               </Reveal>
             </div>

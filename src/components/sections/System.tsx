@@ -8,7 +8,7 @@ export function System() {
       <SectionHeader
         label="How it works"
         title="We coach you, then we hunt down what you missed."
-        intro="Most tutoring is the same worksheets for everyone. We do it differently. We teach you in person, track the exact questions you slip on, and our software builds practice aimed right at them, so no two students get the same homework."
+        intro="Most tutoring is the same work for everyone. We do it differently. We give you practice tests, review your mistakes in person, track the exact questions you need help on, and our software builds practice aimed right at them. No two students get the same homework, and the questions we pull from for your practice are completely unique to our service — with each of them human-verified."
       />
 
       <ol className="mt-14 grid grid-cols-12">

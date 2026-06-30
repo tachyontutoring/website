@@ -27,7 +27,7 @@ export const nav = [
   { label: "FAQ", href: "/faq" },
 ] as const;
 
-export const trustLine = "Your neighborhood tutors · both 99th percentile nationally · took the digital SAT ourselves · now at Harvard";
+export const trustLine = "Your neighborhood tutors · both 99th percentile nationally · took the digital SAT ourselves · now taking classes at Harvard";
 
 // The engine story — lives in the footer colophon. School of Athens is the
 // tutoring; Tachyon is the software that powers the practice.
@@ -39,27 +39,22 @@ export type SystemStep = { title: string; body: string; tag: string };
 export const systemSteps: SystemStep[] = [
   {
     title: "We teach you, one-on-one",
-    body: "You sit down with one of us for a real session. Actual instruction and strategy, not a video to watch alone.",
+    body: "You sit down with one of us for a real session. We review your mistakes and teach you new concepts.",
     tag: "coach",
   },
   {
-    title: "We write down what tripped you up",
-    body: "Every question you miss gets noted by type, so we know it was “systems of equations” and not just “math, needs work.”",
+    title: "We write down and store what you need help with",
+    body: "Every question you miss gets noted by ultra-specific type, so we know what exact kind of question tripped you up and not just “Algebra, needs work.”",
     tag: "track",
   },
   {
     title: "The software builds practice for it",
-    body: "It writes fresh questions aimed at the exact things you keep losing points on. You practice your weak spots, not random problems.",
+    body: "It finds custom questions aimed at the exact things you keep losing points on. In your practice, you won’t be wasting any time, because you’ll be exclusively drilling the concepts that you actually need to improve on.",
     tag: "generate",
   },
   {
-    title: "We check every question",
-    body: "Nothing goes out until we've read it ourselves and confirmed it's correct and actually looks like the real SAT.",
-    tag: "verify",
-  },
-  {
     title: "Your plan changes as you improve",
-    body: "As your weak spots close, the practice shifts to whatever's holding you back next. It keeps up with you.",
+    body: "As your weak spots close, the practice shifts to whatever's holding you back next. In lockstep with the actual tutoring sessions, the software will adjust your practice to your new weak points.",
     tag: "adapt",
   },
 ];
@@ -122,58 +117,45 @@ export const offerings: Offering[] = [
     name: "1:1 Tutoring",
     what: "Private sessions plus personalized AI homework aimed at your exact weak spots.",
     who: "Focused gains on a flexible schedule.",
-    price: "$55–70 / hr",
-    priceNote: "$55 founding rate, $70 standard",
+    price: "$50 / hr",
   },
   {
     name: "Prep Membership",
     what: "Weekly 1:1, unlimited personalized homework, full question-bank access, and a monthly progress report.",
     who: "Students who want the whole system, continuously.",
-    price: "$350 / mo",
+    price: "$265 / mo",
+    priceNote: "or $750 / 3 mo",
     flag: "Flagship",
     recommended: true,
   },
   {
-    name: "Summer Score Bootcamp",
-    what: "A small group of 3–5: diagnostic, targeted instruction, weekly timed practice, and a final mock.",
-    who: "Students who like momentum and a cohort.",
-    price: "$45 / student / hr",
-    flag: "Recommended",
-    recommended: true,
-  },
-  {
     name: "Diagnostic + Game Plan",
-    what: "A full official Bluebook practice test plus a written, question-type-level study plan.",
+    what: "A full custom practice test along with a 30 minute session and comprehensive gameplan.",
     who: "Finding out exactly where your points are hiding.",
     price: "Free",
     priceNote: "with any package",
   },
 ];
 
-export const pricingNotes = [
-  "10-session 1:1 package, $630 (about 10% off hourly)",
-  "Free “Digital SAT 101” info session",
-];
-
 // 07 — DIGITAL-SAT EDGE
 export const edgePoints = [
   {
-    label: "SECTION-ADAPTIVE",
-    text: "Your Module 1 performance sets the difficulty ceiling for Module 2. We drill Module 1 accuracy first, since it's what unlocks the higher-scoring questions.",
+    label: "BUILT ON THE NEW TEST",
+    text: "Every question we drill and every practice test we give you is modeled on the digital, adaptive SAT — not recycled from the retired paper exam. The format, the pacing, and the Bluebook-plus-Desmos setup are the version you'll actually sit.",
   },
   {
-    label: "BUILT FOR BLUEBOOK",
-    text: "The test lives in the College Board's Bluebook app with a built-in Desmos calculator. We teach you when Desmos saves time and when it costs you.",
+    label: "WE'VE ACTUALLY TAKEN IT",
+    text: "It's vital that your tutors have sat the real exam, and we have — recently, scoring 1560. We know the things a prep book won't tell you, like how the adaptive second math module quietly drops in brutally hard questions to separate the top scorers.",
   },
   {
-    label: "SHORTER READING",
-    text: "Reading & Writing is now short, single-paragraph questions. We train the exact question types so you recognize patterns instead of re-reading.",
+    label: "REAL FULL-LENGTH PRACTICE",
+    text: "You get complete, timed practice tests from us, not loose worksheets. We review each one with you in person, then turn the questions you missed into targeted drilling built for the test as it exists today.",
   },
 ];
 
 // 08 — HOW WE USE AI
 export const aiParagraph =
-  "We use AI to write practice questions and study plans tuned to each student. Before any of it reaches you, we read through it ourselves and throw out anything that isn't right. We don't copy real College Board questions; our bank is original. And we'll always ask before we use anything from a session. The software does the heavy lifting so we can spend our time actually teaching.";
+  "We use AI to write practice questions and study plans tuned to each student. We don't copy real College Board questions; our bank is original. We have verified that it matches the difficulty of the real SAT, leaning hard, which is something most other custom question banks can't say. And we'll always ask before we use anything from a session. The software does the heavy lifting in assigning practice, so we can spend our time actually teaching.";
 
 // 09 — TESTIMONIALS
 export type Testimonial = { quote: string; author: string; detail: string; ref: string };
