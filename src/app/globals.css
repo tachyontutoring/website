@@ -4,56 +4,61 @@
 
 /* ---- Design tokens as CSS vars (RGB channels for Tailwind opacity support) ---- */
 :root {
-  /* Paper (cool drafting white — not warm cream) */
-  --color-paper: 245 246 248;
-  --color-paper-soft: 236 238 242;
-  --color-paper-deep: 225 228 234;
-  /* Ink (cool near-black with a faint indigo undertone) */
-  --color-ink: 12 14 22;
-  --color-ink-soft: 44 48 58;
-  --color-ink-muted: 86 92 104;
-  --color-ink-faint: 138 144 156;
+  /* Paper (travertine — warm mineral stone, sampled from the fresco; not cream) */
+  --color-paper: 236 230 214;
+  --color-paper-soft: 227 219 198;
+  --color-paper-deep: 214 203 176;
+  /* Ink (warm sepia-black — the fresco's shadow, not pure black) */
+  --color-ink: 36 27 18;
+  --color-ink-soft: 62 49 34;
+  --color-ink-muted: 106 92 73;
+  --color-ink-faint: 154 140 114;
   /* Hairlines */
-  --color-line: 214 219 227;
-  --color-line-strong: 191 197 208;
-  /* Accent (ultramarine — the tachyon's blue) */
-  --color-accent-50: 236 238 254;
-  --color-accent-100: 218 222 253;
-  --color-accent-200: 183 191 251;
-  --color-accent-300: 142 155 247;
-  --color-accent-400: 97 114 240;
-  --color-accent-500: 58 77 232;
-  --color-accent-600: 30 54 224;
-  --color-accent-700: 26 43 180;
-  --color-accent-800: 23 36 140;
-  --color-accent-900: 20 30 102;
-  /* Signal (warm gold — the single non-blue highlight, used sparingly) */
+  --color-line: 205 193 164;
+  --color-line-strong: 188 174 140;
+  /* Accent (vermilion — Plato's robe; the single bold pigment) */
+  --color-accent-50: 250 238 233;
+  --color-accent-100: 243 216 205;
+  --color-accent-200: 231 180 163;
+  --color-accent-300: 218 139 116;
+  --color-accent-400: 203 97 71;
+  --color-accent-500: 197 69 42;
+  --color-accent-600: 178 58 34;
+  --color-accent-700: 147 48 28;
+  --color-accent-800: 116 37 23;
+  --color-accent-900: 87 27 17;
+  /* Signal (gilded gold — fresco gilding; fine rules + the verified mark) */
   --color-signal-50: 251 243 226;
   --color-signal-100: 246 230 196;
   --color-signal-300: 236 201 131;
-  --color-signal-500: 221 166 62;
-  --color-signal-600: 195 138 38;
-  --color-signal-700: 158 110 28;
+  --color-signal-500: 201 152 58;
+  --color-signal-600: 176 131 44;
+  --color-signal-700: 138 106 30;
+  /* Fresco-blue (the sky / Aristotle — the "engine" hue, bridges Tachyon's blue) */
+  --color-blue-500: 62 111 142;
+  --color-blue-300: 127 166 190;
   /* Grid overlay (full rgba — not used in Tailwind classes) */
-  --grid: rgba(12, 14, 22, 0.05);
+  --grid: rgba(36, 27, 18, 0.05);
   /* Layout */
   --gutter: clamp(1.25rem, 4vw, 4rem);
 }
 
-/* Dark mode token overrides */
+/* Dark mode token overrides — "night fresco": umber ground, travertine ink */
 .dark {
-  --color-paper: 12 14 22;
-  --color-paper-soft: 20 22 31;
-  --color-paper-deep: 28 31 42;
-  --color-ink: 237 239 244;
-  --color-ink-soft: 194 198 208;
-  --color-ink-muted: 136 142 156;
-  --color-ink-faint: 86 92 104;
-  --color-line: 38 42 53;
-  --color-line-strong: 53 58 71;
+  --color-paper: 34 26 17;
+  --color-paper-soft: 44 34 22;
+  --color-paper-deep: 56 48 31;
+  --color-ink: 239 231 212;
+  --color-ink-soft: 214 203 180;
+  --color-ink-muted: 168 154 128;
+  --color-ink-faint: 122 110 88;
+  --color-line: 58 47 32;
+  --color-line-strong: 78 64 48;
+  --color-accent-500: 210 90 58;
+  --color-accent-600: 197 73 46;
   --color-signal-500: 232 180 84;
   --color-signal-600: 221 166 62;
-  --grid: rgba(237, 239, 244, 0.06);
+  --grid: rgba(239, 231, 212, 0.06);
 }
 
 html {
@@ -109,13 +114,26 @@ body {
     @apply border-line;
   }
 
-  /* Section eyebrow: quiet sans caps. (Kept the .mono-label name so every
-     consumer updates at once — mono is now reserved for actual data.) */
+  /* Travertine plaster wash — subtle, for the hero ground (replaces graph paper) */
+  .plaster {
+    background-image:
+      radial-gradient(120% 80% at 12% 0%, rgba(255, 255, 255, 0.5), transparent 60%),
+      radial-gradient(90% 70% at 100% 100%, rgba(120, 96, 52, 0.1), transparent 55%);
+  }
+  /* The fresco shown as a framed plate on a travertine wall */
+  .frame-plate {
+    border: 1px solid rgb(var(--color-signal-600));
+    outline: 7px solid rgb(var(--color-paper));
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Section eyebrow: lapidary Roman caps (Cinzel) — the inscription voice.
+     (Kept the .mono-label name so every consumer updates at once.) */
   .mono-label {
-    @apply font-sans text-[12px] font-semibold uppercase tracking-[0.14em] text-ink-muted;
+    @apply font-inscription text-[12px] font-normal uppercase tracking-[0.24em] text-ink-muted;
   }
   .mono-label-accent {
-    @apply font-sans text-[12px] font-semibold uppercase tracking-[0.14em] text-accent-600;
+    @apply font-inscription text-[12px] font-normal uppercase tracking-[0.24em] text-accent-600;
   }
 
   /* Genuine monospace data label (scores, codes, figures) */

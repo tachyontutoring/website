@@ -1,23 +1,36 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo, Bricolage_Grotesque, Space_Mono } from "next/font/google";
+import { Cinzel, Cormorant_Garamond, EB_Garamond, Space_Mono } from "next/font/google";
 import { site } from "@/lib/site";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
-// Display: Bricolage Grotesque — a characterful editorial grotesque for
-// headlines and large numerals. Body: Archivo — a clean, slightly technical
-// companion. Mono: Space Mono, reserved for real data (scores, prices, legal).
-const display = Bricolage_Grotesque({
+// School of Athens type system, sampled from the fresco's world:
+// Display: Cormorant Garamond (high-contrast Renaissance headlines + quotes).
+// Inscription: Cinzel (lapidary Roman caps — wordmark, eyebrows).
+// Body: EB Garamond (humanist book face, period-correct to Raphael).
+// Mono: Space Mono (the "Tachyon engine" voice — scores, prices, data).
+const display = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",
-  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
+  fallback: ["Cambria", "Georgia", "serif"],
 });
-const sans = Archivo({
+const inscription = Cinzel({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-inscription",
+  display: "swap",
+  fallback: ["Georgia", "serif"],
+});
+const sans = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   variable: "--font-sans",
   display: "swap",
-  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
+  fallback: ["Cambria", "Georgia", "serif"],
 });
 const mono = Space_Mono({
   subsets: ["latin"],
@@ -32,8 +45,8 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Tachyon — SAT tutoring in Cambridge, MA",
-    template: "%s · Tachyon",
+    default: "School of Athens — SAT tutoring in Cambridge, MA",
+    template: "%s · School of Athens",
   },
   description,
   keywords: [
@@ -46,25 +59,25 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    title: "Tachyon — SAT tutoring in Cambridge, MA",
+    title: "School of Athens — SAT tutoring in Cambridge, MA",
     description,
     url: site.url,
     siteName: site.name,
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Tachyon — SAT tutoring in Cambridge, MA" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "School of Athens — SAT tutoring in Cambridge, MA" }],
   },
-  twitter: { card: "summary_large_image", title: "Tachyon — SAT tutoring in Cambridge, MA", description },
+  twitter: { card: "summary_large_image", title: "School of Athens — SAT tutoring in Cambridge, MA", description },
   icons: { icon: "/icon.svg", apple: "/icon.svg" },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F5F6F8",
+  themeColor: "#ECE6D6",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${display.variable} ${sans.variable} ${mono.variable}`}
+      className={`${display.variable} ${inscription.variable} ${sans.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
       <body className="font-sans antialiased">

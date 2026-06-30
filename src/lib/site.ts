@@ -4,17 +4,19 @@
  */
 
 export const site = {
-  name: "Tachyon",
-  wordmark: "TACHYON",
-  tagline: "SAT tutoring from two students who actually aced it.",
+  name: "School of Athens",
+  wordmark: "School of Athens",
+  parent: "Tachyon", // the engine + parent company; surfaced as "Powered by Tachyon"
+  tagline: "One-on-one digital-SAT tutoring in the oldest tradition.",
   blurb:
-    "Two Cambridge students who both scored 1560, coaching the digital SAT one-on-one. It's backed by software that drills exactly what you keep getting wrong.",
+    "Two Cambridge students who both scored 1560, coaching the digital SAT one-on-one. The practice is built by Tachyon — our own software — and every question is checked by hand.",
+  // Pending a schoolofathens.org address; keeping the working inbox for now.
   email: "hello@tachyonprep.com",
   instagram: "tachyonprep",
   instagramUrl: "https://instagram.com/tachyonprep",
   // Swap for your real Calendly link. Search the repo for REPLACE-ME.
   calendlyUrl: "https://calendly.com/cgkuzmick/30min",
-  url: "https://tachyonprep.com",
+  url: "https://schoolofathens.org",
   copyrightYear: 2026,
 } as const;
 
@@ -25,11 +27,12 @@ export const nav = [
   { label: "FAQ", href: "/faq" },
 ] as const;
 
-export const trustLine = "Your neighborhood tutors · both 99th percentile nationally · took the digital SAT ourselves · now taking classes at Harvard";
+export const trustLine = "Your neighborhood tutors · both 99th percentile nationally · took the digital SAT ourselves · now at Harvard";
 
-// Brand etymology — lives in the footer colophon.
+// The engine story — lives in the footer colophon. School of Athens is the
+// tutoring; Tachyon is the software that powers the practice.
 export const tachyonNote =
-  "Tachyons are theoretical particles that can never travel below the speed of light — always faster than everything around them. Their floor is the rest of the universe's ceiling. We tailor your study plan to make your learning move the same way: faster than anything that surrounds it.";
+  "The teaching is human. The practice is powered by Tachyon — our own software. It tracks every question you miss and writes fresh practice aimed at those exact weak spots, and before any of it reaches you, one of us reads it and throws out whatever isn't right. The machine does the drilling so we can spend our time actually teaching.";
 
 // THE SYSTEM (process sequence)
 export type SystemStep = { title: string; body: string; tag: string };
