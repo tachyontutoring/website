@@ -47,10 +47,15 @@ const config: Config = {
           600: "rgb(var(--color-signal-600) / <alpha-value>)",
           700: "rgb(var(--color-signal-700) / <alpha-value>)",
         },
+        fresco: {
+          300: "rgb(var(--color-blue-300) / <alpha-value>)",
+          500: "rgb(var(--color-blue-500) / <alpha-value>)",
+        },
       },
       fontFamily: {
-        display: ["var(--font-display)", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
-        sans: ["var(--font-sans)", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        display: ["var(--font-display)", "Cambria", "Georgia", "serif"],
+        inscription: ["var(--font-inscription)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "Cambria", "Georgia", "serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       fontSize: {

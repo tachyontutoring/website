@@ -49,7 +49,7 @@ export function Footer() {
         <div className="mt-12 border-t border-line pt-8">
           <div className="grid grid-cols-12 gap-x-6 gap-y-3">
             <div className="col-span-12 md:col-span-3">
-              <span className="mono-label">Why &ldquo;Tachyon&rdquo;</span>
+              <span className="mono-label">Powered by Tachyon</span>
             </div>
             <p className="col-span-12 max-w-2xl text-sm leading-relaxed text-ink-muted md:col-span-9">
               {tachyonNote}
