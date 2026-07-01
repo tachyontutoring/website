@@ -32,7 +32,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-ink-soft transition-colors hover:text-accent-700"
+              className="text-base text-ink-soft transition-colors hover:text-accent-700"
             >
               {item.label}
             </Link>
@@ -41,7 +41,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
-          <Link href="/#booking" className="btn-primary !py-2.5 text-sm">
+          <Link href="/#booking" className="btn-primary !py-2.5 text-base">
             Book a diagnostic
           </Link>
         </div>

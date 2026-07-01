@@ -141,20 +141,20 @@ body {
   /* Section eyebrow: lapidary Roman caps (Cinzel) — the inscription voice.
      (Kept the .mono-label name so every consumer updates at once.) */
   .mono-label {
-    @apply font-inscription text-[12px] font-normal uppercase tracking-[0.24em] text-ink-muted;
+    @apply font-inscription text-[13px] font-normal uppercase tracking-[0.24em] text-ink-muted;
   }
   .mono-label-accent {
-    @apply font-inscription text-[12px] font-normal uppercase tracking-[0.24em] text-accent-600;
+    @apply font-inscription text-[13px] font-normal uppercase tracking-[0.24em] text-accent-600;
   }
 
   /* Genuine monospace data label (scores, codes, figures) */
   .data-label {
-    @apply font-mono text-[11px] uppercase tracking-label text-ink-muted;
+    @apply font-mono text-[12px] uppercase tracking-label text-ink-muted;
   }
 
   /* Buttons */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-600 focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+    @apply inline-flex items-center justify-center gap-2 text-base font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-600 focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
   }
   .btn-primary {
     @apply btn bg-ink px-6 py-3.5 text-paper hover:bg-accent-600;

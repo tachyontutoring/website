@@ -25,7 +25,7 @@ export function System() {
                 <p className="mt-2 max-w-xl text-xl leading-relaxed text-ink-soft">{step.body}</p>
               </div>
               <div className="col-span-12 mt-3 md:col-span-3 md:mt-0 md:text-right">
-                <span className="font-mono text-[11px] tracking-wide text-ink-faint">/ {step.tag}</span>
+                <span className="font-mono text-[12px] tracking-wide text-ink-faint">/ {step.tag}</span>
               </div>
             </div>
           </Reveal>

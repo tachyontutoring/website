@@ -23,7 +23,7 @@ export function CtaBand({
           <div className="col-span-12 md:col-span-4 md:text-right">
             <Link
               href="/#booking"
-              className="group inline-flex items-center gap-2 bg-accent-600 px-6 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent-500"
+              className="group inline-flex items-center gap-2 bg-accent-600 px-6 py-3.5 text-base font-medium text-paper transition-colors hover:bg-accent-500"
             >
               Book a free diagnostic
               <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" />

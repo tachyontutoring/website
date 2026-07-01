@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
+import { contacts } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -12,9 +13,9 @@ export function Hero() {
             <span className="mono-label">SAT Tutoring &middot; Cambridge, MA</span>
 
             <h1 className="mt-5 font-display text-[clamp(2.8rem,6.4vw,5.4rem)] font-semibold leading-[0.98] tracking-[-0.01em] text-ink">
-              <span className="block animate-fade-up">Two 1560s,</span>
+              <span className="block animate-fade-up">Affordable SAT tutoring</span>
               <span className="block animate-fade-up" style={{ animationDelay: "100ms" }}>
-                in your corner.
+                from high-achieving students.
               </span>
             </h1>
 
@@ -38,6 +39,23 @@ export function Hero() {
                 Grab a free diagnostic
                 <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" />
               </a>
+            </div>
+
+            <div
+              className="mt-6 flex flex-col items-start gap-3 animate-fade-up sm:flex-row sm:items-center sm:gap-8"
+              style={{ animationDelay: "300ms" }}
+            >
+              <span className="mono-label-accent whitespace-nowrap">Or email us directly</span>
+              {contacts.map((c) => (
+                <a
+                  key={c.email}
+                  href={`mailto:${c.email}`}
+                  className="inline-flex items-center gap-2 text-lg font-medium text-ink hover:text-accent-700"
+                >
+                  <Mail size={18} aria-hidden="true" />
+                  {c.email}
+                </a>
+              ))}
             </div>
           </div>
 
