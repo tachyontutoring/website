@@ -22,16 +22,7 @@ export const contacts = [
   { first: "Conrad", email: "cgkuzmick@gmail.com" },
 ] as const;
 
-export const nav = [
-  { label: "How it works", href: "/how-it-works" },
-  { label: "Tutors", href: "/tutors" },
-  { label: "FAQ", href: "/faq" },
-] as const;
-
-// The engine story — lives in the footer colophon. School of Athens is the
-// tutoring; Tachyon is the software that powers the practice.
-export const tachyonNote =
-  "The teaching is human. The practice is powered by Tachyon — our own software. It tracks every question you miss and writes fresh practice aimed at those exact weak spots, and before any of it reaches you, one of us reads it and throws out whatever isn't right. The machine does the drilling so we can spend our time actually teaching.";
+export const nav = [] as const;
 
 // THE SYSTEM (process sequence)
 export type SystemStep = { title: string; body: string; tag: string };
@@ -42,18 +33,18 @@ export const systemSteps: SystemStep[] = [
     tag: "coach",
   },
   {
-    title: "We write down and store what you need help with",
-    body: "Every question you miss gets noted by ultra-specific type, so we know what exact kind of question tripped you up and not just “Algebra, needs work.”",
+    title: "We log exactly what you missed",
+    body: "Every question you miss gets logged by specific type, so we know precisely what kind of question gave you trouble — not just “Algebra, needs work.”",
     tag: "track",
   },
   {
-    title: "The software builds practice for it",
-    body: "It finds custom questions aimed at the exact things you keep losing points on. In your practice, you won’t be wasting any time, because you’ll be exclusively drilling the concepts that you actually need to improve on.",
+    title: "Tachyon builds new practice around it",
+    body: "Tachyon writes fresh questions aimed at those exact weak spots, so you're not stuck redoing problems you've already got down.",
     tag: "generate",
   },
   {
-    title: "Your plan changes as you improve",
-    body: "As your weak spots close, the practice shifts to whatever's holding you back next. In lockstep with the actual tutoring sessions, the software will adjust your practice to your new weak points.",
+    title: "Your plan keeps adjusting",
+    body: "As those weak spots close, your practice shifts to whatever's next — right alongside your tutoring sessions.",
     tag: "adapt",
   },
 ];
@@ -114,31 +105,6 @@ export const testimonials: Testimonial[] = [
   { quote: "[Testimonial coming soon]", author: "Parent of a rising senior", detail: "Cambridge, MA", ref: "T-01" },
   { quote: "[Testimonial coming soon]", author: "Rising junior", detail: "Math + R&W", ref: "T-02" },
   { quote: "[Testimonial coming soon]", author: "Parent of a rising junior", detail: "Prep Membership", ref: "T-03" },
-];
-
-// 10 — FAQ
-export type Faq = { q: string; a: string };
-export const faqs: Faq[] = [
-  {
-    q: "Online or in person?",
-    a: "Both. We can tutor over Zoom with a shared whiteboard, or meet in person around Cambridge. We can be flexible with timing, location, and online vs. in person. You choose what will be the best fit for you.",
-  },
-  {
-    q: "How does the AI part actually work? Is it just ChatGPT?",
-    a: "No. We built our own setup that keeps track of the questions you miss and finds new practice aimed at those exact types. We have a bank of specific labeled questions to give you, and our tools allow us to identify which practice will help you improve the most. It's a tool we use to spend our time on the stuff that actually needs a person.",
-  },
-  {
-    q: "Is my student's data private?",
-    a: "Yes. We never sell or share data, and we will explicitly ask if we want to use session transcripts to help see what you or your student needed help with.",
-  },
-  {
-    q: "How do payments work?",
-    a: "Pay hourly, or join the monthly Prep Membership. If you commit for longer (like 3 months), the rate goes down. We confirm the rate and details after your diagnostic.",
-  },
-  {
-    q: "How do we start?",
-    a: "Book a free diagnostic below, or send the quick request form. We'll email within a day to set up your Bluebook practice test and first session.",
-  },
 ];
 
 export const gradeOptions = ["Rising 10th", "Rising 11th", "Rising 12th"] as const;

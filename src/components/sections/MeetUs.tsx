@@ -33,7 +33,7 @@ export function MeetUs() {
                   <h3 className="font-display text-2xl font-medium text-ink">{t.name}</h3>
                   <span className="font-mono text-sm text-ink-muted">{t.score}</span>
                 </div>
-                <p className="mt-2 text-xl leading-relaxed text-ink-soft">{t.hook}</p>
+                <p className="mt-2 text-xl leading-relaxed text-ink-soft">{t.bio}</p>
               </div>
             </div>
           </Reveal>

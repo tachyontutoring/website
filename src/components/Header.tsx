@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Wordmark } from "./Wordmark";
 import { ThemeToggle } from "./ThemeToggle";
-import { nav } from "@/lib/site";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,18 +25,6 @@ export function Header() {
     >
       <div className="wrap flex h-16 items-center justify-between">
         <Wordmark />
-
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-base text-ink-soft transition-colors hover:text-accent-700"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
 
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
@@ -64,16 +51,6 @@ export function Header() {
       {open && (
         <div id="mobile-menu" className="border-t border-line bg-paper md:hidden">
           <nav className="wrap flex flex-col py-3" aria-label="Mobile">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="py-3 text-ink-soft hover:text-ink"
-              >
-                {item.label}
-              </Link>
-            ))}
             <Link href="/#booking" onClick={() => setOpen(false)} className="btn-primary mt-3">
               Book a diagnostic
             </Link>

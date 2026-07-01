@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { Wordmark } from "./Wordmark";
-import { nav, site, contacts, tachyonNote } from "@/lib/site";
+import { site, contacts } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -14,16 +14,9 @@ export function Footer() {
             <p className="mt-5 text-sm text-ink-faint">Based in Cambridge, MA.</p>
           </div>
 
-          <nav className="col-span-6 md:col-span-4" aria-label="Footer">
+          <nav className="col-span-12 sm:col-span-6 md:col-span-3" aria-label="Footer">
             <span className="mono-label">Pages</span>
             <ul className="mt-4 space-y-2">
-              {nav.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className="text-base text-ink-soft hover:text-accent-700">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
               <li>
                 <Link href="/#booking" className="text-base font-medium text-ink hover:text-accent-700">
                   Book a diagnostic
@@ -32,16 +25,16 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div className="col-span-6 md:col-span-3">
+          <div className="col-span-12 sm:col-span-6 md:col-span-4">
             <span className="mono-label">CONTACT</span>
             <div className="mt-4 flex flex-col gap-3">
               {contacts.map((c) => (
                 <a
                   key={c.email}
                   href={`mailto:${c.email}`}
-                  className="inline-flex items-center gap-2 text-lg font-medium text-ink hover:text-accent-700"
+                  className="inline-flex items-center gap-2 break-words text-2xl font-medium text-ink hover:text-accent-700"
                 >
-                  <Mail size={18} aria-hidden="true" />
+                  <Mail size={22} className="shrink-0" aria-hidden="true" />
                   {c.email}
                 </a>
               ))}
@@ -50,16 +43,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-line pt-8">
-          <div className="grid grid-cols-12 gap-x-6 gap-y-3">
-            <div className="col-span-12 md:col-span-3">
-              <span className="mono-label">Powered by Tachyon</span>
-            </div>
-            <p className="col-span-12 max-w-2xl text-base leading-relaxed text-ink-muted md:col-span-9">
-              {tachyonNote}
-            </p>
-          </div>
-
-          <p className="mt-10 max-w-3xl font-mono text-[12px] leading-relaxed text-ink-faint">
+          <p className="max-w-3xl font-mono text-[12px] leading-relaxed text-ink-faint">
             © {site.copyrightYear} {site.name}. {site.name} is an independent tutoring service. Not
             affiliated with or endorsed by the College Board. SAT is a registered trademark of the
             College Board.
