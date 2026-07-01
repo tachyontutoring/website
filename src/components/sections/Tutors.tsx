@@ -8,7 +8,7 @@ export function Tutors() {
       <SectionHeader
         label="The tutors"
         title="It's just the two of us."
-        intro="Either of us can tutor the whole test, math and reading and writing alike. We just lean a little different, and we'll pair you with whoever fits best. Real headshots are on the way; for now, here's who we are."
+        intro="Either of us can tutor the whole test. We'll pair you with whoever's schedule fits best."
       />
 
       <div className="mt-14 grid grid-cols-1 gap-px border border-line bg-line lg:grid-cols-2">
@@ -34,8 +34,8 @@ export function Tutors() {
               <p className="mt-5 leading-relaxed text-ink-soft">{t.bio}</p>
 
               <p className="mt-auto pt-7 text-sm text-ink-muted">
-                <span className="text-ink-faint">Best with </span>
-                {t.specialty}.
+                <span className="text-ink-faint">Tutors </span>
+                the whole test — Math and Reading.
               </p>
             </article>
           </Reveal>

@@ -73,33 +73,27 @@ export const stats: Stat[] = [
 export type Tutor = {
   name: string;
   monogram: string;
-  role: string;
   score: string;
   breakdown: string;
   school: string;
   bio: string;
-  specialty: string;
 };
 export const tutors: Tutor[] = [
   {
     name: "Conrad Kuzmick",
     monogram: "CK",
-    role: "Head of Math",
     score: "SAT 1560",
-    breakdown: "800 Math, perfect",
+    breakdown: "800 Math / 760 R&W",
     school: "Cambridge Rindge & Latin School",
-    bio: "Math is where Conrad is sharpest. He makes it feel like a system instead of a wall, the same handful of patterns dressed up in new problems. That said, he's strong across the whole test, reading and writing included, and he took the digital SAT himself without missing a math question. When he's not tutoring, he's the programming lead on the school's robotics team.",
-    specialty: "SAT Math, especially students pushing for 1500+",
+    bio: "Hi, I'm Conrad. I took both the March and June SAT this year, as well as scoring highly on all the Bluebook practice exams. Math is certainly what I enjoy more, but I can tutor both sections well! I lead programming on my school's robotics team when I'm not studying.",
   },
   {
     name: "Filip Knippen",
     monogram: "FK",
-    role: "Head of Reading & Writing",
     score: "SAT 1560",
-    breakdown: "770 R&W · 790 Math",
+    breakdown: "790 Math / 770 R&W",
     school: "Cambridge Rindge & Latin School",
-    bio: "Reading and writing is Filip's strong suit. He turns a section that feels like guesswork into rules you can actually trust. He's just as comfortable in the math section, and he took the current SAT recently enough to remember every spot where students second-guess themselves. Off the clock, he started the school's mock trial team and talked three real attorneys into coaching it.",
-    specialty: "SAT Reading & Writing and grammar, especially students chasing a top verbal score",
+    bio: "Hi, I'm Filip. I also took the March and June SATs. I love both the math and the reading sections, and I'm able to tutor both. Off the clock, I lead Mock Trial at my school.",
   },
 ];
 
@@ -107,15 +101,15 @@ export const tutors: Tutor[] = [
 export const edgePoints = [
   {
     label: "BUILT ON THE NEW TEST",
-    text: "Every question we drill and every practice test we give you is modeled on the digital, adaptive SAT — not recycled from the retired paper exam. The format, the pacing, and the Bluebook-plus-Desmos setup are the version you'll actually sit.",
+    text: "Every question we drill and every practice test we give you is modeled on the digital, adaptive SAT. The questions are generated based on careful inspection of the current Digital SAT, and they imitate it seamlessly. The format, the pacing, and the questions are the version you'll actually sit.",
   },
   {
     label: "WE'VE ACTUALLY TAKEN IT",
-    text: "It's vital that your tutors have sat the real exam, and we have — recently, scoring 1560. We know the things a prep book won't tell you, like how the adaptive second math module quietly drops in brutally hard questions to separate the top scorers.",
+    text: "It's vital that your tutors have sat the real exam, and we have, recently. We know the things a prep book won't tell you. A quick example that not everyone knows about is how the adaptive second math module quietly drops in brutally hard questions to separate the top scorers.",
   },
   {
     label: "REAL FULL-LENGTH PRACTICE",
-    text: "You get complete, timed practice tests from us, not loose worksheets. We review each one with you in person, then turn the questions you missed into targeted drilling built for the test as it exists today.",
+    text: "You get complete, timed practice tests from us, not loose worksheets. We review each one with you in person, then turn the questions you missed into targeted drilling built for the test as it exists today. On our end, we know exactly what kind of question tripped you up on the practice test, so we can assign that kind of practice.",
   },
 ];
 
@@ -136,27 +130,19 @@ export type Faq = { q: string; a: string };
 export const faqs: Faq[] = [
   {
     q: "Online or in person?",
-    a: "Both. We tutor over video with a shared whiteboard, and meet in person around Cambridge when it's a fit. You pick whatever keeps sessions consistent.",
-  },
-  {
-    q: "How is the new digital SAT different?",
-    a: "It's shorter, section-adaptive, and taken in the College Board's Bluebook app with a built-in Desmos calculator. Your Module 1 performance sets the difficulty of Module 2, so early accuracy matters more than ever. We sat for this exact test, so we coach to it, not the retired paper version.",
+    a: "Both. We can tutor over Zoom with a shared whiteboard, or meet in person around Cambridge. We can be flexible with timing, location, and online vs. in person. You choose what will be the best fit for you.",
   },
   {
     q: "How does the AI part actually work? Is it just ChatGPT?",
-    a: "No. We built our own setup that keeps track of the questions you miss and writes new practice aimed at those exact types. The difference is that we read every question it produces before you ever see it. So it's not you alone with a chatbot. It's a tool we use to spend our time on the stuff that actually needs a person.",
+    a: "No. We built our own setup that keeps track of the questions you miss and finds new practice aimed at those exact types. We have a bank of specific labeled questions to give you, and our tools allow us to identify which practice will help you improve the most. It's a tool we use to spend our time on the stuff that actually needs a person.",
   },
   {
     q: "Is my student's data private?",
-    a: "Yes. We never sell or share data. We ask for explicit parent consent before using any session transcript, and our question bank is original, so we don't feed real College Board material into anything.",
-  },
-  {
-    q: "How many sessions will I need?",
-    a: "It depends on your starting point and goal, but most students see meaningful movement in 8–12 sessions. The free diagnostic gives us the data to give you an honest estimate before you commit.",
+    a: "Yes. We never sell or share data, and we will explicitly ask if we want to use session transcripts to help see what you or your student needed help with.",
   },
   {
     q: "How do payments work?",
-    a: "Pay hourly, buy the 10-session package up front to save ~10%, or join the monthly Prep Membership. We confirm the rate and details after your diagnostic. No surprises.",
+    a: "Pay hourly, or join the monthly Prep Membership. If you commit for longer (like 3 months), the rate goes down. We confirm the rate and details after your diagnostic.",
   },
   {
     q: "How do we start?",

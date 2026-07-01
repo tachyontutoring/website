@@ -21,8 +21,8 @@ export default function FaqPage() {
             <span className="mono-label block">FAQ</span>
             <h1 className="mt-4 font-display text-display-lg font-medium text-ink">Stuff people usually ask.</h1>
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-              Everything worth knowing before booking your free diagnostic. Still stuck? Email us —
-              we answer every message ourselves.
+              Everything worth knowing before booking your free diagnostic. Still stuck? Email us.
+              We answer every message personally.
             </p>
 
             <div className="mt-10">
