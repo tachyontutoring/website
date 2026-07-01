@@ -2,7 +2,7 @@ import { Mail, Instagram } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
 import { LeadForm } from "@/components/LeadForm";
-import { site } from "@/lib/site";
+import { site, contacts } from "@/lib/site";
 
 export function Booking() {
   return (
@@ -22,10 +22,12 @@ export function Booking() {
       {/* contact */}
       <Reveal className="mt-10 flex flex-col items-start gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:gap-10">
         <span className="mono-label-accent">CONTACT</span>
-        <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 text-ink-soft hover:text-accent-700">
-          <Mail size={17} aria-hidden="true" />
-          {site.email}
-        </a>
+        {contacts.map((c) => (
+          <a key={c.email} href={`mailto:${c.email}`} className="inline-flex items-center gap-2 text-ink-soft hover:text-accent-700">
+            <Mail size={17} aria-hidden="true" />
+            {c.email}
+          </a>
+        ))}
         <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-ink-soft hover:text-accent-700">
           <Instagram size={17} aria-hidden="true" />@{site.instagram}
         </a>

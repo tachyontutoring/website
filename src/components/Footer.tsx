@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail, Instagram } from "lucide-react";
 import { Wordmark } from "./Wordmark";
-import { nav, site, tachyonNote } from "@/lib/site";
+import { nav, site, contacts, tachyonNote } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -35,10 +35,12 @@ export function Footer() {
           <div className="col-span-6 md:col-span-3">
             <span className="mono-label">CONTACT</span>
             <div className="mt-4 flex flex-col gap-3">
-              <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-accent-700">
-                <Mail size={15} aria-hidden="true" />
-                {site.email}
-              </a>
+              {contacts.map((c) => (
+                <a key={c.email} href={`mailto:${c.email}`} className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-accent-700">
+                  <Mail size={15} aria-hidden="true" />
+                  {c.email}
+                </a>
+              ))}
               <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-accent-700">
                 <Instagram size={15} aria-hidden="true" />@{site.instagram}
               </a>
