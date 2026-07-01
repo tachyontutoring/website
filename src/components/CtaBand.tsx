@@ -14,7 +14,7 @@ export function CtaBand({
 }) {
   return (
     <section className="bg-ink text-paper">
-      <div className="wrap grid-paper py-16 md:py-20">
+      <div className="wrap-narrow grid-paper py-16 md:py-20">
         <div className="grid grid-cols-12 items-end gap-y-6">
           <div className="col-span-12 md:col-span-8">
             <h2 className="font-display text-display-md font-medium text-paper">{title}</h2>

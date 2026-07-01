@@ -13,7 +13,7 @@ function Fig({ children }: { children: React.ReactNode }) {
 
 export function Credentials() {
   return (
-    <section className="wrap pt-20 pb-0 md:pt-28 md:pb-0">
+    <section className="wrap-narrow pt-20 pb-0 md:pt-28 md:pb-0">
       <div className="border-t-2 border-ink pt-8">
         <span className="mono-label">By the numbers</span>
       </div>

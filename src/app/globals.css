@@ -95,6 +95,14 @@ body {
     padding-right: var(--gutter);
   }
 
+  /* Narrower column used below the hero — the hero keeps the full .wrap width */
+  .wrap-narrow {
+    @apply mx-auto w-full;
+    max-width: 1000px;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
   /* The motif: fine graph-paper grid. Subtle, layered behind content. */
   .grid-paper {
     background-image:

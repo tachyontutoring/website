@@ -5,7 +5,7 @@ import { edgePoints } from "@/lib/site";
 export function DigitalEdge() {
   return (
     <section id="edge" className="bg-ink text-paper scroll-mt-20">
-      <div className="wrap grid-paper py-20 md:py-28">
+      <div className="wrap-narrow grid-paper py-20 md:py-28">
         <div className="border-t-2 border-paper/25 pt-8">
           <div className="grid grid-cols-12 gap-x-6 gap-y-4">
             <div className="col-span-12 md:col-span-3">

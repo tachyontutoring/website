@@ -8,7 +8,7 @@ import { TachyonMark } from "@/components/Wordmark";
  */
 export function Engine() {
   return (
-    <section className="wrap py-20 md:py-28">
+    <section className="wrap-narrow py-20 md:py-28">
       <div className="border-t-2 border-ink pt-8">
         <span className="mono-label">How it works</span>
       </div>
@@ -24,8 +24,8 @@ export function Engine() {
         </p>
       </Reveal>
 
-      <div className="mt-12 grid gap-px overflow-hidden bg-line md:grid-cols-2">
-        <div className="bg-paper p-8 md:p-10">
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="border border-ink p-8 md:p-10">
           <span className="data-label text-accent-600">The people</span>
           <h3 className="mt-3 font-display text-3xl font-semibold text-ink">School of Athens</h3>
           <p className="mt-3 leading-relaxed text-ink-soft">
@@ -33,7 +33,7 @@ export function Engine() {
             around the Greater Boston Area.
           </p>
         </div>
-        <div className="bg-paper p-8 md:p-10">
+        <div className="border border-ink p-8 md:p-10">
           <span className="data-label inline-flex items-center gap-2 text-fresco-500">
             <TachyonMark size={15} className="text-fresco-500" /> The engine
           </span>

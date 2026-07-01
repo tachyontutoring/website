@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
 
 const pages = [
@@ -15,11 +14,6 @@ const pages = [
     blurb: "Who we are, what we scored, how we can help you.",
   },
   {
-    href: "/pricing",
-    title: "Services & pricing",
-    blurb: "Every way to work with us.",
-  },
-  {
     href: "/faq",
     title: "Questions",
     blurb: "Online vs. in person, data privacy, how many sessions you'll need, and more.",
@@ -28,13 +22,8 @@ const pages = [
 
 export function Directory() {
   return (
-    <section className="wrap py-20 md:py-28">
-      <SectionHeader
-        label="Look around"
-        title="The details are below."
-      />
-
-      <div className="mt-12 border-t border-ink">
+    <section className="wrap-narrow py-20 md:py-28">
+      <div className="border-t-2 border-ink">
         {pages.map((p, i) => (
           <Reveal key={p.href} delay={i * 60}>
             <Link

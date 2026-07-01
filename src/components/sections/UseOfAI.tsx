@@ -11,7 +11,7 @@ const guarantees = [
 
 export function UseOfAI() {
   return (
-    <section id="ai" className="wrap scroll-mt-20 py-20 md:py-28">
+    <section id="ai" className="wrap-narrow scroll-mt-20 py-20 md:py-28">
       <SectionHeader label="How we use AI" title="What the AI does, and what we do." />
 
       <div className="mt-12 grid grid-cols-12 gap-x-6 gap-y-10">

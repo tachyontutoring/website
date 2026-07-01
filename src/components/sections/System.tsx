@@ -4,7 +4,7 @@ import { systemSteps } from "@/lib/site";
 
 export function System() {
   return (
-    <section id="system" className="wrap scroll-mt-20 py-20 md:py-28">
+    <section id="system" className="wrap-narrow scroll-mt-20 py-20 md:py-28">
       <SectionHeader
         label="How it works"
         title="We coach you, then we hunt down what you missed."

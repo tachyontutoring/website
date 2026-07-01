@@ -4,7 +4,7 @@ import { tutors } from "@/lib/site";
 
 export function Tutors() {
   return (
-    <section id="tutors" className="wrap scroll-mt-20 py-20 md:py-28">
+    <section id="tutors" className="wrap-narrow scroll-mt-20 py-20 md:py-28">
       <SectionHeader
         label="The tutors"
         title="It's just the two of us."

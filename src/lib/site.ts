@@ -10,8 +10,6 @@ export const site = {
   tagline: "One-on-one digital-SAT tutoring in the oldest tradition.",
   blurb:
     "Two Cambridge students who both scored 1560, coaching the digital SAT one-on-one. The practice is built by Tachyon — our own software — and every question is checked by hand.",
-  instagram: "tachyonprep",
-  instagramUrl: "https://instagram.com/tachyonprep",
   // Swap for your real Calendly link. Search the repo for REPLACE-ME.
   calendlyUrl: "https://calendly.com/cgkuzmick/30min",
   url: "https://schoolofathens.org",
@@ -27,7 +25,6 @@ export const contacts = [
 export const nav = [
   { label: "How it works", href: "/how-it-works" },
   { label: "Tutors", href: "/tutors" },
-  { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
 ] as const;
 
@@ -103,41 +100,6 @@ export const tutors: Tutor[] = [
     school: "Cambridge Rindge & Latin School",
     bio: "Reading and writing is Filip's strong suit. He turns a section that feels like guesswork into rules you can actually trust. He's just as comfortable in the math section, and he took the current SAT recently enough to remember every spot where students second-guess themselves. Off the clock, he started the school's mock trial team and talked three real attorneys into coaching it.",
     specialty: "SAT Reading & Writing and grammar, especially students chasing a top verbal score",
-  },
-];
-
-// SERVICES & PRICING (one consolidated editorial table)
-export type Offering = {
-  name: string;
-  what: string;
-  who: string;
-  price: string;
-  priceNote?: string;
-  flag?: string;
-  recommended?: boolean;
-};
-export const offerings: Offering[] = [
-  {
-    name: "1:1 Tutoring",
-    what: "Private sessions plus personalized AI homework aimed at your exact weak spots.",
-    who: "Focused gains on a flexible schedule.",
-    price: "$50 / hr",
-  },
-  {
-    name: "Prep Membership",
-    what: "Weekly 1:1, unlimited personalized homework, full question-bank access, and a monthly progress report.",
-    who: "Students who want the whole system, continuously.",
-    price: "$265 / mo",
-    priceNote: "or $750 / 3 mo",
-    flag: "Flagship",
-    recommended: true,
-  },
-  {
-    name: "Diagnostic + Game Plan",
-    what: "A full custom practice test along with a 30 minute session and comprehensive gameplan.",
-    who: "Finding out exactly where your points are hiding.",
-    price: "Free",
-    priceNote: "with any package",
   },
 ];
 

@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Mail, Instagram } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Wordmark } from "./Wordmark";
 import { nav, site, contacts, tachyonNote } from "@/lib/site";
 
 export function Footer() {
   return (
     <footer className="border-t border-ink bg-paper">
-      <div className="wrap py-14">
+      <div className="wrap-narrow py-14">
         <div className="grid grid-cols-12 gap-y-10">
           <div className="col-span-12 md:col-span-5">
             <Wordmark href="/" />
@@ -41,9 +41,6 @@ export function Footer() {
                   {c.email}
                 </a>
               ))}
-              <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-accent-700">
-                <Instagram size={15} aria-hidden="true" />@{site.instagram}
-              </a>
             </div>
           </div>
         </div>
