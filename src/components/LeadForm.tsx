@@ -236,7 +236,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={htmlFor} className="mb-1.5 flex items-center gap-1.5 text-sm font-medium text-ink-soft">
+      <label htmlFor={htmlFor} className="mb-1.5 flex items-center gap-1.5 text-base font-medium text-ink-soft">
         {label}
         {required && <span className="text-accent-600" aria-hidden="true">*</span>}
         {hint && <span className="text-xs font-normal text-ink-faint">({hint})</span>}

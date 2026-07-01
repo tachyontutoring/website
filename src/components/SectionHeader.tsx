@@ -26,7 +26,7 @@ export function SectionHeader({
           <Reveal>
             <h2 className="font-display text-display-lg font-medium text-ink">{title}</h2>
             {intro && (
-              <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">{intro}</p>
+              <p className="mt-4 max-w-2xl text-xl leading-relaxed text-ink-soft">{intro}</p>
             )}
           </Reveal>
         </div>

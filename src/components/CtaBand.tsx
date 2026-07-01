@@ -18,7 +18,7 @@ export function CtaBand({
         <div className="grid grid-cols-12 items-end gap-y-6">
           <div className="col-span-12 md:col-span-8">
             <h2 className="font-display text-display-md font-medium text-paper">{title}</h2>
-            <p className="mt-3 max-w-xl text-paper/70">{blurb}</p>
+            <p className="mt-3 max-w-xl text-lg text-paper/70">{blurb}</p>
           </div>
           <div className="col-span-12 md:col-span-4 md:text-right">
             <Link

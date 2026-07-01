@@ -1,6 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import { TachyonMark } from "@/components/Wordmark";
-import { trustLine } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -11,7 +9,7 @@ export function Hero() {
         <div className="grid items-center gap-12 pb-20 pt-28 sm:pt-36 md:pb-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* thesis */}
           <div>
-            <span className="mono-label">Cambridge, MA</span>
+            <span className="mono-label">SAT Tutoring &middot; Cambridge, MA</span>
 
             <h1 className="mt-5 font-display text-[clamp(2.8rem,6.4vw,5.4rem)] font-semibold leading-[0.98] tracking-[-0.01em] text-ink">
               <span className="block animate-fade-up">Two 1560s,</span>
@@ -21,13 +19,12 @@ export function Hero() {
             </h1>
 
             <p
-              className="mt-7 max-w-xl text-lg leading-relaxed text-ink-soft animate-fade-up sm:text-xl"
+              className="mt-7 max-w-xl text-2xl leading-relaxed text-ink-soft animate-fade-up sm:text-3xl"
               style={{ animationDelay: "180ms" }}
             >
-              We&rsquo;re two Cambridge students who both scored 1560 on the new digital SAT ourselves.
-              You get real one&#8209;on&#8209;one coaching with us, and for practice you get{" "}
-              <span className="italic text-ink">Tachyon</span>: the software we built to drill exactly what
-              keeps tripping you up. Every question is checked by hand.
+              We&rsquo;re two Cambridge Rindge &amp; Latin School students who scored 1560 on the digital
+              SAT ourselves. You get real one&#8209;on&#8209;one coaching, and practice built to drill
+              exactly what keeps tripping you up. Every question is checked by hand.
             </p>
 
             <div
@@ -42,21 +39,6 @@ export function Hero() {
                 <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" />
               </a>
             </div>
-
-            <div
-              className="mt-6 inline-flex items-center gap-2.5 text-ink-muted animate-fade-up"
-              style={{ animationDelay: "300ms" }}
-            >
-              <TachyonMark size={17} className="text-fresco-500" />
-              <span className="font-mono text-[12px] tracking-wide">Practice powered by Tachyon</span>
-            </div>
-
-            <p
-              className="mt-9 max-w-xl text-[15px] italic text-ink-muted animate-fade-up"
-              style={{ animationDelay: "340ms" }}
-            >
-              {trustLine}
-            </p>
           </div>
 
           {/* the fresco, framed like a painting on a travertine wall */}

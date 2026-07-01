@@ -4,11 +4,11 @@ import { systemSteps } from "@/lib/site";
 
 export function System() {
   return (
-    <section id="system" className="wrap-narrow scroll-mt-20 py-20 md:py-28">
+    <section id="system" className="wrap-narrow scroll-mt-20 py-16 md:py-20">
       <SectionHeader
         label="How it works"
         title="We coach you, then we hunt down what you missed."
-        intro="Most tutoring is the same work for everyone. We do it differently. We give you practice tests, review your mistakes in person, track the exact questions you need help on, and our software builds practice aimed right at them. No two students get the same homework, and the questions we pull from for your practice are completely unique to our service — with each of them human-verified."
+        intro="Most tutoring is the same work for everyone. We do it differently. We give you practice tests, review your mistakes in person, and track the exact questions you need help on. (We call the whole system Tachyon.) Here's the loop, start to finish."
       />
 
       <ol className="mt-14 grid grid-cols-12">
@@ -22,7 +22,7 @@ export function System() {
               </div>
               <div className="col-span-12 md:col-span-7">
                 <h3 className="font-display text-2xl font-medium text-ink">{step.title}</h3>
-                <p className="mt-2 max-w-xl text-ink-soft">{step.body}</p>
+                <p className="mt-2 max-w-xl text-xl leading-relaxed text-ink-soft">{step.body}</p>
               </div>
               <div className="col-span-12 mt-3 md:col-span-3 md:mt-0 md:text-right">
                 <span className="font-mono text-[11px] tracking-wide text-ink-faint">/ {step.tag}</span>

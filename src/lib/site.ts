@@ -9,7 +9,7 @@ export const site = {
   parent: "Tachyon", // the engine + parent company; surfaced as "Powered by Tachyon"
   tagline: "One-on-one digital-SAT tutoring in the oldest tradition.",
   blurb:
-    "Two Cambridge students who both scored 1560, coaching the digital SAT one-on-one. The practice is built by Tachyon — our own software — and every question is checked by hand.",
+    "Two Cambridge Rindge & Latin students who both scored 1560, coaching the digital SAT one-on-one. Practice that adapts to exactly what you miss, every question checked by hand.",
   // Swap for your real Calendly link. Search the repo for REPLACE-ME.
   calendlyUrl: "https://calendly.com/cgkuzmick/30min",
   url: "https://schoolofathens.org",
@@ -27,8 +27,6 @@ export const nav = [
   { label: "Tutors", href: "/tutors" },
   { label: "FAQ", href: "/faq" },
 ] as const;
-
-export const trustLine = "Your neighborhood tutors · both 99th percentile nationally · took the digital SAT ourselves · now taking classes at Harvard";
 
 // The engine story — lives in the footer colophon. School of Athens is the
 // tutoring; Tachyon is the software that powers the practice.
@@ -77,6 +75,7 @@ export type Tutor = {
   breakdown: string;
   school: string;
   bio: string;
+  hook: string; // one-line version of bio, for the homepage brief
 };
 export const tutors: Tutor[] = [
   {
@@ -86,6 +85,7 @@ export const tutors: Tutor[] = [
     breakdown: "800 Math / 760 R&W",
     school: "Cambridge Rindge & Latin School",
     bio: "Hi, I'm Conrad. I took both the March and June SAT this year, as well as scoring highly on all the Bluebook practice exams. Math is certainly what I enjoy more, but I can tutor both sections well! I lead programming on my school's robotics team when I'm not studying.",
+    hook: "Hi, I'm Conrad — 1560, 800 on math. I lead programming on my school's robotics team when I'm not tutoring.",
   },
   {
     name: "Filip Knippen",
@@ -94,28 +94,19 @@ export const tutors: Tutor[] = [
     breakdown: "790 Math / 770 R&W",
     school: "Cambridge Rindge & Latin School",
     bio: "Hi, I'm Filip. I also took the March and June SATs. I love both the math and the reading sections, and I'm able to tutor both. Off the clock, I lead Mock Trial at my school.",
+    hook: "Hi, I'm Filip — 1560, split almost evenly between math and reading. Off the clock, I lead Mock Trial at my school.",
   },
 ];
 
-// 07 — DIGITAL-SAT EDGE
-export const edgePoints = [
-  {
-    label: "BUILT ON THE NEW TEST",
-    text: "Every question we drill and every practice test we give you is modeled on the digital, adaptive SAT. The questions are generated based on careful inspection of the current Digital SAT, and they imitate it seamlessly. The format, the pacing, and the questions are the version you'll actually sit.",
-  },
-  {
-    label: "WE'VE ACTUALLY TAKEN IT",
-    text: "It's vital that your tutors have sat the real exam, and we have, recently. We know the things a prep book won't tell you. A quick example that not everyone knows about is how the adaptive second math module quietly drops in brutally hard questions to separate the top scorers.",
-  },
-  {
-    label: "REAL FULL-LENGTH PRACTICE",
-    text: "You get complete, timed practice tests from us, not loose worksheets. We review each one with you in person, then turn the questions you missed into targeted drilling built for the test as it exists today. On our end, we know exactly what kind of question tripped you up on the practice test, so we can assign that kind of practice.",
-  },
+// 07 — WHAT YOU ACTUALLY GET (the short version, consolidated: used to be a
+// separate "digital SAT edge" section plus a separate "how we use AI" section;
+// merged into one tight block so the how-it-works page doesn't run long).
+export const tachyonFacts = [
+  "Modeled on the current digital, adaptive SAT, not the old paper test — same format, same pacing, same kind of questions you'll actually sit.",
+  "We've taken the real thing ourselves, recently, so we know things a prep book won't tell you.",
+  "Every generated question is read and checked by one of us before it reaches you.",
+  "Our question bank is original. We never copy real College Board questions.",
 ];
-
-// 08 — HOW WE USE AI
-export const aiParagraph =
-  "We use AI to write practice questions and study plans tuned to each student. We don't copy real College Board questions; our bank is original. We have verified that it matches the difficulty of the real SAT, leaning hard, which is something most other custom question banks can't say. And we'll always ask before we use anything from a session. The software does the heavy lifting in assigning practice, so we can spend our time actually teaching.";
 
 // 09 — TESTIMONIALS
 export type Testimonial = { quote: string; author: string; detail: string; ref: string };

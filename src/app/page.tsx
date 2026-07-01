@@ -1,8 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { Credentials } from "@/components/sections/Credentials";
-import { Engine } from "@/components/sections/Engine";
+import { Adaptive } from "@/components/sections/Adaptive";
+import { MeetUs } from "@/components/sections/MeetUs";
 import { Directory } from "@/components/sections/Directory";
 import { Booking } from "@/components/sections/Booking";
 
@@ -12,8 +12,8 @@ export default function Home() {
       <Header />
       <main id="main">
         <Hero />
-        <Credentials />
-        <Engine />
+        <Adaptive />
+        <MeetUs />
         <Directory />
         <Booking />
       </main>

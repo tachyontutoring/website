@@ -40,7 +40,7 @@ const mono = Space_Mono({
 });
 
 const description =
-  "Two Cambridge students who both scored 1560, tutoring the digital SAT one-on-one. Real coaching backed by software that drills exactly what you keep getting wrong — and we check every practice question ourselves. Online or in person.";
+  "Two Cambridge Rindge & Latin students who both scored 1560, tutoring the digital SAT one-on-one. Real coaching, plus practice that adapts to exactly what you keep getting wrong — every question checked by hand. Online or in person.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

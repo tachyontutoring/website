@@ -2,7 +2,7 @@
 
 ## Project
 
-SAT tutoring marketing site, public-facing brand **School of Athens** (schoolofathens.org). Two Cambridge, MA students (Conrad Kuzmick, Filip Knippen) who scored 1560, coaching the digital SAT one-on-one, now at Harvard. **Tachyon** is the practice-question engine behind it — credited as "powered by Tachyon" (footer colophon, hero badge), not the public site name. Built with Next.js 14 App Router, Tailwind CSS, and Supabase.
+SAT tutoring marketing site, public-facing brand **School of Athens** (schoolofathens.org). Two Cambridge Rindge & Latin School students (Conrad Kuzmick, Filip Knippen) who scored 1560, coaching the digital SAT one-on-one. **Tachyon** is the practice-question engine behind it — credited as "powered by Tachyon" (footer colophon only as of the parent-approachability redesign; no longer named on the homepage), not the public site name. Built with Next.js 14 App Router, Tailwind CSS, and Supabase.
 
 ## Dev server
 

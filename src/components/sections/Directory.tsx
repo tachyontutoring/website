@@ -6,12 +6,12 @@ const pages = [
   {
     href: "/how-it-works",
     title: "How it works",
-    blurb: "The coaching-plus-software loop, and exactly how we use AI (without cutting any corners, of course).",
+    blurb: "The quick version — what the practice actually does, and what we call it.",
   },
   {
     href: "/tutors",
     title: "Meet the tutors",
-    blurb: "Who we are, what we scored, how we can help you.",
+    blurb: "The full write-up on each of us, and how we can help you.",
   },
   {
     href: "/faq",
@@ -22,7 +22,7 @@ const pages = [
 
 export function Directory() {
   return (
-    <section className="wrap-narrow py-20 md:py-28">
+    <section className="wrap-narrow py-14 md:py-16">
       <div className="border-t-2 border-ink">
         {pages.map((p, i) => (
           <Reveal key={p.href} delay={i * 60}>
@@ -30,10 +30,10 @@ export function Directory() {
               href={p.href}
               className="group grid grid-cols-12 items-baseline gap-x-6 gap-y-1 border-b border-line py-6 transition-colors hover:bg-paper-soft/60"
             >
-              <h3 className="col-span-11 font-display text-2xl font-medium text-ink md:col-span-4">
+              <h3 className="col-span-11 font-display text-3xl font-medium text-ink md:col-span-4">
                 {p.title}
               </h3>
-              <p className="col-span-12 text-ink-soft md:col-span-7">{p.blurb}</p>
+              <p className="col-span-12 text-xl text-ink-soft md:col-span-7">{p.blurb}</p>
               <span className="col-span-1 hidden justify-end md:flex">
                 <ArrowUpRight
                   size={20}
