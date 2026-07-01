@@ -10,8 +10,6 @@ export const site = {
   tagline: "One-on-one digital-SAT tutoring in the oldest tradition.",
   blurb:
     "Two Cambridge students who both scored 1560, coaching the digital SAT one-on-one. The practice is built by Tachyon — our own software — and every question is checked by hand.",
-  // Pending a schoolofathens.org address; keeping the working inbox for now.
-  email: "hello@tachyonprep.com",
   instagram: "tachyonprep",
   instagramUrl: "https://instagram.com/tachyonprep",
   // Swap for your real Calendly link. Search the repo for REPLACE-ME.
@@ -19,6 +17,12 @@ export const site = {
   url: "https://schoolofathens.org",
   copyrightYear: 2026,
 } as const;
+
+// Personal contacts — you reach one of us directly, not a company inbox.
+export const contacts = [
+  { first: "Filip", email: "filipknippen@gmail.com" },
+  { first: "Conrad", email: "cgkuzmick@gmail.com" },
+] as const;
 
 export const nav = [
   { label: "How it works", href: "/how-it-works" },
